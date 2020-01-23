@@ -293,8 +293,8 @@ img
 .project_img
 {
 	background-size: cover;
-	width: 400px;
-	height: 400px;
+	width: 500px;
+	height: 500px;
 	object-fit: scale-down;
 }
 
@@ -304,9 +304,13 @@ a
 	text-decoration: none;
 }
 
+a:hover
+{
+	
+}
+
 .about
 {
 	margin: 10%;
 	display: flex;
 }
-
