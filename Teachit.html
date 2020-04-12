@@ -1,177 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Teachit | Kate Zhao</title>
-	<link href="style.css" rel="stylesheet" type="text/css">
-	<link rel="shortcut icon" type="image/png" href="logo.png">
+    <!-- Meta tags -->
+    <meta name="author" content="Kate Zhao">
+    <meta name="description" content="Kate Zhao Professional Website">
+    <meta charset="utf-8">
+
+    <!-- External Links to CSS files -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <link rel="shortcut icon" type="image/png" href="images/logo.png">
+
+    <title>TeachIt</title>
 </head>
 <body>
-	<header>
-		<div class="row">
-			<a href="index.html">
-			<img src="logo.png" class="logo">
-			</a>
-		<ul class="main-bar">
-			<li><a href="index.html"> WORK </a> </li>
-			<li><a href="Kate Zhao_Resume.pdf" target="_blank"> RESUME </a> </li>			     
-			<li> <a href="about.html"> ABOUT </a> </li>
+    <div id="top_row">
+        <header>
+            <a href="index.html"><img src="images/logo.png" alt="logo" width=70px></a>
+            <nav>
+                <a class="selected" href="index.html">WORK</a>
+                <a href="Kate Zhao_Resume.pdf" target="_blank">RESUME</a>
+                <a href="about.html">ABOUT</a>
+            </nav>
+        </header>
+    </div>
 
-		</ul>
-		</div>
-	</header>
+    <div class="project-container">
+        <h1>TEACHIT</h1>
+        <p>I worked with undergraduate students Shalini Rao and Mashia Mazumder on this semester-long design research project. We wanted to create a solution for the problem surrounding the improper integration of new edtech in classrooms due to a lack of continued support from district administration. I contributed to the preparatory research, user feedback and design of the product.</p>
 
-	<div class="project_title">
-		TEACHIT
-	</div>
+        <img src="images/teach_forum.png" alt="forum page">
 
+        <div class="project-section">
+            <h3>PROBLEM STATEMENT</h3>
+            <p><span style="font-weight: normal">Teachers are not effectively implementing new technology in their classrooms, which has serious repercussions for their students.</span></p>
+            <br>
+            <p>Although administration has the resources to provide teachers with new technology, they are not allocating enough resources to teaching teachers how to use that technology. School systems falsely rely on the excitement surrounding new technology rather than trying to create a lasting solution using that technology.</p>
+        </div>
 
-	<div class="project_subsection">
-		<p class="project_text">I worked with undergraduate students Shalini Rao and Mashia Mazumder on this semester-long design research project. We wanted to create a solution for the problem surrounding the improper integration of new edtech in classrooms due to a lack of continued support from district administration. I contributed to the preparatory research, user feedback and design of the product. </p>
-	</div>
+        <div class="project-section">
+            <h3>PROBLEM SCOPE</h3>
+            <p>Our target audience is K-12 teachers employed in low-income areas in the United States, whose respective school can supply students with technology such as computers. K-12 teachers in lower-income areas often are not provided with the instruction and support on how to best integrate the technology they are given into their curriculum.Choosing to "implement technology" in trivial ways by having students type out their homework or do tasks that repeat traditional practices does not harness the full potential of educational technologies. Teachers are not being trained on what real technology based learning can look like and they have not been shown the numerous other ways that students can use technology in the learning process, rather than just in assessments and assignments.</p>
+        </div>
 
-	<div class="project_subsection">
-		<img src="Teachit/teach_forum.png" class="community_img">
-	</div>
+        <div class="project-section">
+            <h3>DEEPER PROBLEM UNDERSTANDING</h3>
+            <p>Since our target audience consisted of teachers, specifically in low-resource areas, it was difficult to contact that exact audience for interviews or user testing. Instead, we broke down our target audience into what they are fundamentally: adults who had minimal experience with technology who then needed to become more skilled for their jobs.</p>
+            <br>
+            <p>What we wanted to know: <span style="font-weight: normal">What resources did they have/use when pushed to transition into digital literacy?</span></p>
 
-	<!-- Problem Statement -->
-	<div class="project_subsection">
-		<p class="project_subtitle">PROBLEM STATEMENT</p>
-		<p class="project_text"><span style="font-weight: normal">Teachers are not effectively implementing new technology in their classrooms, which has serious repercussions for their students.</span></p>
-		<Br>
-		<p class="project_text"> Although administration has the resources to provide teachers with new technology, they are not allocating enough resources to teaching teachers how to use that technology. School systems falsely rely on the excitement surrounding new technology rather than trying to create a lasting solution using that technology. </p>
-	</div>
-
-	<!-- Problem Scope -->
-	<div class="project_subsection">
-		<p class="project_subtitle">PROBLEM SCOPE</p>
-		<p class="project_text">Our target audience is K-12 teachers employed in low-income areas in the United States, whose respective school can supply students with technology such as computers. K-12 teachers in lower-income areas often are not provided with the instruction and support on how to best integrate the technology they are given into their curriculum.Choosing to "implement technology" in trivial ways by having students type out their homework or do tasks that repeat traditional practices does not harness the full potential of educational technologies. Teachers are not being trained on what real technology based learning can look like and they have not been shown the numerous other ways that students can use technology in the learning process, rather than just in assessments and assignments.</p>
-	</div>
-
-	<!-- Deeper Problem Understanding -->
-	<div class="project_subsection">
-		<p class="project_subtitle">DEEPER PROBLEM UNDERSTANDING</p>
-		<p class="project_text">Since our target audience consisted of teachers, specifically in low-resource areas, it was difficult to contact that exact audience for interviews or user testing. Instead, we broke down our target audience into what they are fundamentally: adults who had minimal experience with technology who then needed to become more skilled for their jobs.</p>
-
-		<br>
-		<p class="project_text"> What we wanted to know: <span style="font-weight: normal">What resources did they have/use when pushed to transition into digital literacy?</span></p>
-
-
-		<!-- quotes --> 
-		<br>
-		<br>
-		<div class="purple_border">
-			<ul class="purple_border_list">
-				<li>"When I first touched a computer, it was already self-explanatory because I had been watching other people and asking questions."</li>
+            <br><br>
+            <ul>
+                <li>"When I first touched a computer, it was already self-explanatory because I had been watching other people and asking questions."</li>
 				<br>
 				<li>"Technology was already very common so I was exposed to it even though I never really had to use it."</li>
 				<br>
 				<li>"I just asked co-workers if I had any problems. I didn't need any other resources and I didn't want to use other resources"</li>
-			</ul>
-		</div>
-		<br>
-		<br>
+            </ul>
+            <br><br>
 
+            <p>Their responses may not be an accurate representation of our target audience. However, it was evident that both users preferred <span style="text-decoration: underline">to talk to people</span> instead of reading resources or books. This informs the motivation behind our forum - <span style="font-weight: normal">interpersonal interactions</span> provide better support than the one way interaction between a teacher and a webpage.</p>
+        </div>
 
-		<p class="project_text">Their responses may not be an accurate representation of our target audience. However, it was evident that both users preferred <span style="text-decoration: underline">to talk to people</span> instead of reading resources or books. This informs the motivation behind our forum - <span style="font-weight: normal">interpersonal interactions</span> provide better support than the one way interaction between a teacher and a webpage.</p>
-	</div>
+        <div class="project-section">
+            <h3>SOLUTION OVERVIEW</h3>
+            <p>Based on all our primary and secondary research, we settled on three main features:</p>
 
-	<!-- Solution Overview-->
-	<div class="project_subsection">
-		<p class="project_subtitle">SOLUTION OVERVIEW</p>
-		<p class="project_text"> Based on all our primary and secondary research, we settled on three main features: 
+            <img src="images/teach_features.png" alt="features of platform">
+        </div>
 
-		<img src="Teachit/teach_features.png" class="community_img">
-	</div>
+        <div class="project-section">
+            <h3>EDUCATIONAL GOALS AND ASSESSMENT</h3>
+            <p>A large majority of our efforts this semester was put toward performing <span style="text-decoration: underline">research on why such a platform should exist</span>, rather than the platform itself. We created our prototype to demonstrate how our findings from research and interviews played into the design decisions for the features and layout of the platform.</p>
+            <br>
 
-	<!-- Educational Goals, Instruction, and Assessment --> 
-	<div class="project_subsection">
-		<p class="project_subtitle">EDUCATIONAL GOALS AND ASSESSMENT</p>
-		<p class="project_text">A large majority of our efforts this semester was put toward performing <span style="text-decoration: underline">research on why such a platform should exist</span>, rather than the platform itself. We created our prototype to demonstrate how our findings from research and interviews played into the design decisions for the features and layout of the platform.</p>
-
-		<br>
-		<p><span style="font-style:italic; letter-spacing: .5px">Goals</span></p>
-			<ul class="project_list">
-				<li>Incorporate technology in a way that supports the mandated curriculum</li>
+            <h2>Goals</h2>
+            <ul>
+                <li>Incorporate technology in a way that supports the mandated curriculum</li>
 				<li>Be comfortable using the new technology and/or seeking help through resources such as  the social aspects of TeachIt </li>
 				<li>Create effective technology-based lesson plans that engages students</li>
-			</ul>
+            </ul>
 
-		<p><span style="font-style:italic; letter-spacing: .5px">Assessment</span></p>
-		<p class="project_text">There is no formal assessment of the teachers’ skills - we would actually assess the impact of our platform by looking at the performance of their classrooms before and after the use of the platform. The platform should have a “trickle down” effect on the students’ learning as a result of helping and empowering the teachers.</p>
-	</div>
+            <h2>Assessment</h2>
+            <p>There is no formal assessment of the teachers’ skills - we would actually assess the impact of our platform by looking at the performance of their classrooms before and after the use of the platform. The platform should have a “trickle down” effect on the students’ learning as a result of helping and empowering the teachers.</p>
+        </div>
 
-	<!-- Design and Storyboards -->
-	<div class="project_subsection">
-		<p class="project_subtitle">DESIGN AND STORYBOARDS</p>
-		<p class="project_text">The storyboards below demonstrate different ways teachers will be able to utilize our final product.</p>
+        <div class="project-section">
+            <h3>DESIGN AND STORYBOARDS</h3>
+            <p>The storyboards below demonstrate different ways teachers will be able to utilize our final product.</p>
 
-		<br>
-		<p class="project_text"><span style="font-weight: normal">Lesson Plan Inspiration</span> Teachers are able to look through creative lesson plans other teachers post when they want to try something new in the classroom. </p>
-		<img src="Teachit/teach_story1.JPG" class="career_img">
-		<br>
+            <p><span style="font-weight: normal">Lesson Plan Inspiration</span> Teachers are able to look through creative lesson plans other teachers post when they want to try something new in the classroom. </p>
+            <img src="images/teach_story1.jpg" alt="storyboard1">
+            <p><span style="font-weight: normal">Sharing Lesson Plans</span> Teachers can share lesson plans that worked really well in their classroom.</p>
+            <img src="images/teach_story3.png" alt="storyboard3">
+            <p><span style="font-weight: normal">Seeking Help Within the Classroom</span> Teachers can seek advice on specific problems they're having.</p>
+            <img src="images/teach_story2.jpg" alt="storyboard2">
+            <p><span style="font-weight: normal">Utilizing Online Resources and Workshops</span> When struggling to create new technology-based lesson plans, teachers can watch our online workshops and consolidated list of resource links to guide them.</p>
+            <img src="images/teach_story4.jpg" alt="storyboard4">
+        </div>
 
-		<p class="project_text"><span style="font-weight: normal">Sharing Lesson Plans</span> Teachers can share lesson plans that worked really well in their classroom. </p>
-		<img src="Teachit/teach_story3.png" class="career_img">
-		<br>
+        <div class="project-section">
+            <h3>WIREFRAMING AND PROTOTYPING</h3>
+            <img src="images/wireframe1.jpg" alt="wireframe1">
+            <img src="images/wireframe2.jpg" alt="wireframe2">
+        </div>
 
-		<p class="project_text"><span style="font-weight: normal">Seeking Help Within the Classroom</span> Teachers can seek advice on specific problems they're having.</p>
-		<img src="Teachit/teach_story2.JPG" class="career_img">
-		<br>
-
-		<p class="project_text"><span style="font-weight: normal">Utilizing Online Resources and Workshops</span> When struggling to create new technology-based lesson plans, teachers can watch our online workshops and consolidated list of resource links to guide them.</p>
-		<img src="Teachit/teach_story4.JPG" class="career_img">
-		<br>
-
-	</div>
-
-	<!-- Wireframing and Prototyping -->
-	<div class="project_subsection">
-		<p class="project_subtitle">WIREFRAMING AND PROTOTYPING</p>
-		<img src="Teachit/wireframe1.JPG" class="community_img">
-		<img src="Teachit/wireframe2.JPG" class="community_img">
-	</div>
-
-	<!-- Formative Assessmemt & Redesign -->
-	<div class="project_subsection">
-		<p class="project_subtitle">FORMATIVE ASSESSMENT AND REDESIGN</p>
-		<p class="project_text">It was difficult to get people in our target audience to conduct user testing, so we did user testing with our peers. We briefed them on the purpose of the platform, and were told to <span style="text-decoration: underline">think aloud</span> as they navigated through our prototype. These are the comments they made about the prototype:</p>
-
-		<br>
-		<p><span style="font-style:italic; letter-spacing: .5px">Comments from User Testing</span></p>
-			<ul class="project_list">
-				<li>Would not be inclined to use the website without some type of administrative push</li>
+        <div class="project-section">
+            <h3>FORMATIVE ASSESSMENT AND REDESIGN</h3>
+            <p>It was difficult to get people in our target audience to conduct user testing, so we did user testing with our peers. We briefed them on the purpose of the platform, and were told to <span style="text-decoration: underline">think aloud</span> as they navigated through our prototype. These are the comments they made about the prototype:</p>
+            <h2>Comments from User Testing</h2>
+            <ul>
+                <li>Would not be inclined to use the website without some type of administrative push</li>
 				<li>Would not join the platform unless there was already information on there with many users</li>
 				<li>Liked videos because it makes it easier to learn new concepts - prefer this to reading an article for example </li>
 				<li>Liked that course materials were provided alongside workshops because it caters to different teacher learning styles </li>
 				<li>Feed feels overwhelming - they suggested an overview of general threads at first </li>
-			</ul>
-		<p><span style="font-style:italic; letter-spacing: .5px">Future Design Considerations</span></p>
-			<ul class="project_list">
-				<li>Redesign platform to be compatible with other devices</li>
+            </ul>
+
+            <h2>Future Design Considerations</h2>
+            <ul>
+                <li>Redesign platform to be compatible with other devices</li>
 				<li>Feed customization based on teacher preferences and searches</li>
 				<li>Continuous evaluation of evolving technology to provide teachers with most current and relevant information. </li>
 				<li>Expanding resources to account for widely used technology (i.e. iPads or tablets)</li>
 				<li>Opportunity to use AI to better cater forum to teacher's needs and interests.</li>
-			</ul>
-	</div>
+            </ul>
+        </div>
 
-
-	<div class="project_subsection">
-		<p class="project_subtitle">PERSONAL TAKEAWAYS</p>
-			<ul class="project_list">
-				<li><span style="font-weight: normal">Get creative with your resources!</span> Even without direct access to our intended end users, we still got a lot of good feedback through "think alouds" and finding people similar to our target population. </li>
+        <div class="project-section">
+            <h3>PERSONAL TAKEAWAYS</h3>
+            <ul>
+                <li><span style="font-weight: normal">Get creative with your resources!</span> Even without direct access to our intended end users, we still got a lot of good feedback through "think alouds" and finding people similar to our target population. </li>
 				<li>Doing <span style="font-weight: normal">sufficient research</span> is important prior to starting any project to understand the market, successes, and failures of similar products in the same field. All of the decisions we made regarding the actual product was derived from research and user testing. </li>
 				<li><span style="font-weight: normal">Education</span> is SO important and should be made <span style="font-weight: normal">available and accessible</span> to as many people as possible. I think growing up in this digital age, I easily forget how fortunate I was to have teachers who had technical competency. </li> 
-			</ul>
-	</div>
+            </ul>
+        </div>
 
-	<hr>
-	<div class="project_subsection">
-		<p class="project_subtitle">REFERENCES</p>
-		<p class="project_text"><span style="font-size: 12px; font-style: italic">Canough, Jeanne, "Effective Implementation of Technology" (2013). Education Masters. Paper 261.</span></p>
-		<p class="project_text"><span style="font-size: 12px; font-style: italic">Gore, Jenny. “Here's How to Support Quality Teaching, with the Evidence to Back It.” Phys.org, Phys.org, 27 July 2018, phys.org/news/2018-07-quality-evidence.html.</span></p>
-		<p class="project_text"><span style="font-size: 12px; font-style: italic">American Physiological Society. “Online Professional Development Boosts Teachers' Confidence, Knowledge.” Phys.org, Science X Network, 21 June 2018, phys.org/news/2018-06-online-professional-boosts-teachers-confidence.html.</span></p>
-	</div>
+        <hr>
+        <div class="project-section">
+            <h3>REFERENCES</h3>
+            <p><span style="font-size: 12px; font-style: italic">Canough, Jeanne, "Effective Implementation of Technology" (2013). Education Masters. Paper 261.</span></p>
+            <p><span style="font-size: 12px; font-style: italic">Gore, Jenny. “Here's How to Support Quality Teaching, with the Evidence to Back It.” Phys.org, Phys.org, 27 July 2018, phys.org/news/2018-07-quality-evidence.html.</span></p>
+            <p><span style="font-size: 12px; font-style: italic">American Physiological Society. “Online Professional Development Boosts Teachers' Confidence, Knowledge.” Phys.org, Science X Network, 21 June 2018, phys.org/news/2018-06-online-professional-boosts-teachers-confidence.html.</span></p>
+        </div>
 
+    </div>
+
+    <footer>
+        &copy; Kate Zhao<br>
+    </footer>
 </body>
 </html>

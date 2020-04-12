@@ -1,106 +1,101 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Kate Zhao</title>
-	<link href="style.css" rel="stylesheet" type="text/css">
-	<link rel="shortcut icon" type="image/png" href="logo.png">
+    <!-- Meta tags -->
+    <meta name="author" content="Kate Zhao">
+    <meta name="description" content="Kate Zhao Professional Website">
+    <meta charset="utf-8">
+
+    <!-- External Links to CSS files -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <link rel="shortcut icon" type="image/png" href="images/logo.png">
+
+    <title>Kate Zhao</title>
 </head>
-
-
 <body>
-	<header>
-		
-		<div class="row">
-			<a href="index.html">
-			<img src="logo.png" class="logo">
-			</a>
-			<ul class="main-bar">
-				<li class="active"><a href=""> WORK </a> </li>
-				<li><a href="Kate Zhao_Resume.pdf" target="_blank"> RESUME </a> </li>			     
-				<li> <a href="about.html"> ABOUT </a> </li>
+    <div id="container">
+        <div id="top_row">
+            <header>
+                <a href="index.html"><img src="images/logo.png" alt="logo" width=70px></a>
+                <nav>
+                    <a class="selected" href="index.html">WORK</a>
+                    <a href="Kate Zhao_Resume.pdf" target="_blank">RESUME</a>
+                    <a href="about.html">ABOUT</a>
+                </nav>
+            </header>
+            <div id="introduction">
+                <p>Hi, I'm Kate! I am a sophomore studying Information Systems, Human-Computer Interaction, and Business Administration at <a href="https://www.cmu.edu/information-systems/" target="_blank">Carnegie Mellon University</a>.</p>
+                <p>They say everything in life is an experience. I hope to create something worth experiencing -- to make a positive impact on as many people I can. Check out what I've been up to below!</p>
+            </div>
+        </div>
 
-			</ul>
-		</div>
-
-		<div class="title">
-			<p class="project_text"><span style="font-weight: normal">Hi, I'm Kate!</span> I am a sophomore studying Information Systems and Business Administration at <a href="https://www.cmu.edu/information-systems/" target="_blank">Carnegie Mellon University</a>.</p>
-			<br>
-			<p class="project_text">They say everything in life is an experience. I hope to create something worth experiencing -- to make a <span style="font-weight: normal">positive impact on as many people I can</span>. Check out what I've been up to below!</p>
-		</div>
-
-		<div class="break">
-		</div>
-	</header>
-
-		<div class="work">
-
-			<!-- Career Trajectories -->
-			<div class="project_container">
-				<div class="project_info">
-					<p class="info_right">ux, user research</p>
+        <div id="work">
+            <!-- FixIt -->
+			<div class="card-container">
+				<div class="project-additionalinfo">
+					<p>ux, user research, mobile</p>
 				</div>
-				<a href="Career_Trajectories.html" class="project_link">
-					<div class="project_main">
-						<div class="project_column">
-							<img src="career2.png" class="project_img">
+				<a href="fixit.html" class="card-link">
+					<div class="project-card">
+						<div class="card-img">
+							<img src="images/fixit.png">
 						</div>
 
-						<div class="project_column">
-							<p class="project_subtitle">CAREER TRAJECTORIES</p>
-							<p class="project_text"><span style="font-style: italic; font-size: 12px">january - may 2019</span></p>
-							<br>
+						<div class="card-info">
+							<p class="card-title">FIXIT</p>
+							<p class="card-date">february 2020</p>
+							<p class="project_text">A mobile app aimed at making the experience of submitting personal maintenance requests fast and convenient.</p>
+						</div>
+					</div>
+				</a>
+            </div>
+            
+            <!-- Career Trajectories -->
+			<div class="card-container">
+				<div class="project-additionalinfo">
+					<p>ux, user research</p>
+				</div>
+				<a href="career.html" class="card-link">
+					<div class="project-card">
+						<div class="card-img">
+							<img src="images/career.png">
+						</div>
+
+						<div class="card-info">
+							<p class="card-title">CAREER TRAJECTORIES</p>
+							<p class="card-date">january - mary 2019</p>
 							<p class="project_text">As part of a larger research effort to understand career development, this research opportunity focused on using technology to improve the job search process for under-resourced populations.</p>
 						</div>
 					</div>
 				</a>
-			</div>
-
-			<!-- TeachIt -->
-			<div class="project_container">
-				<div class="project_info">
-					<p class="info_right">edtech, learning principles, ux, research</p>
+            </div>
+            
+            <!-- TeachIt -->
+			<div class="card-container">
+				<div class="project-additionalinfo">
+					<p>edtech, learning principles, research</p>
 				</div>
-				<a href="Teachit.html" class="project_link">
-					<div class="project_main">
-						<div class="project_column">
-							<img src="Teachit.png" class="project_img">
+				<a href="teachit.html" class="card-link">
+					<div class="project-card">
+						<div class="card-img">
+							<img src="images/teachit.png">
 						</div>
 
-						<div class="project_column">
-							<p class="project_subtitle">TEACHIT</p>
-							<p class="project_text"><span style="font-style: italic; font-size: 12px">august - december 2019</span></p>
-							<br>
-							<p class="project_text">TeachIt is an online platform aimed to help teachers effectively integrate technology in their classrooms. </p>
+						<div class="card-info">
+							<p class="card-title">TEACHIT</p>
+							<p class="card-date">august - december 2019</p>
+							<p class="project_text">TeachIt is an online platform aimed to help teachers effectively integrate technology in their classrooms.</p>
 						</div>
 					</div>
 				</a>
 			</div>
 
+        </div>
+    </div>
 
-			<!-- Biomotivate --> 
-			<div class="project_container">
-				<div class="project_info">
-					<p class="info_right">biotechnology, data visualization, user research</p>
-				</div>
-				<a href="Biomotivate.html" class="project_link">
-					<div class="project_main">
-						<div class="project_column">
-							<img src="biomo.jpg" class="project_img">
-						</div>
-
-						<div class="project_column">
-							<p class="project_subtitle">BIOMOTIVATE</p>
-							<p class="project_text"><span style="font-style: italic; font-size: 12px">summer 2019</span></p>
-							<br>
-							<p class="project_text">During my summer internship, I worked on multiple projects with the goal of decreasing the relapse rate for recovering opioid addicts.</p>
-						</div>
-					</div>
-				</a>
-			</div>
-		</div>
-
-	<footer>
-		<p class="project_text"> Built by Kate Zhao</p>
-	</footer>
+    <footer>
+        &copy; Kate Zhao<br>
+    </footer>
 </body>
-
 </html>

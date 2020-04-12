@@ -1,41 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>About Kate</title>
-	<link href="style.css" rel="stylesheet" type="text/css">
-	<link rel="shortcut icon" type="image/png" href="logo.png">
+    <!-- Meta tags -->
+    <meta name="author" content="Kate Zhao">
+    <meta name="description" content="Kate Zhao Professional Website">
+    <meta charset="utf-8">
+
+    <!-- External Links to CSS files -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <link rel="shortcut icon" type="image/png" href="images/logo.png">
+
+    <title>About Me</title>
 </head>
-
 <body>
-	<header>
-		<div class="row">
-			<a href="index.html">
-			<img src="logo.png" class="logo">
-			</a>
-		<ul class="main-bar">
-			<li><a href="index.html"> WORK </a> </li>
-			<li><a href="Kate Zhao_Resume.pdf" target="_blank"> RESUME </a> </li>			     
-			<li> <a href=""> ABOUT </a> </li>
+    <div id="top_row">
+        <header>
+            <a href="index.html"><img src="images/logo.png" alt="logo" width=70px></a>
+            <nav>
+                <a href="index.html">WORK</a>
+                <a href="Kate Zhao_Resume.pdf" target="_blank">RESUME</a>
+                <a class="selected" href="about.html">ABOUT</a>
+            </nav>
+        </header>
+    </div>
 
-		</ul>
-		</div>
+    <div id="about-container">
+        <div id="about-content">
+            <img src="images/me_horizontal.jpg" alt="profile pic">
+        </div>
 
-	</header>
+        <div id="about-content">
+            <p>Hi, I'm Kate! I'm currently studying Information Systems and Business Administration at Carnegie Mellon University. I am a student ambassador at the <a href="https://www.cmu.edu/visit/ambassadors.html" target="_blank">Coulter Welcome Center</a> and vice president of alpha Kappa Delta Phi, an asian-interest sorority on campus.</p>
 
-	<div class="about">
-		<div class="column">
-			<img src="me_horizontal.JPG">
-		</div>
+            <p class="project_text">My favorite hobby is music -- both listening to and creating it! I enjoy making my parents laugh and cooking for my friends. In the future, I hope to be eating good food.</p>
+            
+            <a class="project_text" href="mailto:zetak3600@gmail.com"><span style="color: rgb(157, 162, 235)">I'd love to talk to you!</span></a>
+        </div>
+    </div>
 
-		<div class="column">
-			<p class="project_text"><span style="font-weight: normal">Hi, I'm Kate!</span> I'm currently studying Information Systems and Business Administration at Carnegie Mellon University. I am a student ambassador at the <a href="https://www.cmu.edu/visit/ambassadors.html" target="_blank">Coulter Welcome Center</a> and vice president of alpha Kappa Delta Phi, an asian-interest sorority on campus. </p>
-			<br>
 
-			<p class="project_text">My favorite hobby is music -- both listening to and creating it! I enjoy making my parents laugh and cooking food for my friends. In the future, I hope to be eating good food.</p>
-
-			<br>
-		</div>
-	</div>
-
+    <footer>
+        &copy; Kate Zhao<br>
+    </footer>
 </body>
 </html>
