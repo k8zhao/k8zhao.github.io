@@ -17,7 +17,7 @@ img {
 h1{
     color: rgb(66, 66, 66);
     text-align: center; 
-    margin-top: 80px;
+    margin-top: 120px;
     margin-bottom: 100px;
     font-family: "Gill Sans"; 
     font-size: 25px;
@@ -31,10 +31,16 @@ h3 {
 }
 
 h2 {
+    margin-top: 40px;
     font-size: 18px;
     font-weight: normal;
     font-style: italic; 
 }
+
+#title {
+    color: rgb(157, 162, 235);
+}
+
 
 
 /* Top Row */
@@ -47,8 +53,8 @@ header {
 }
 
 #top_row {
-    margin-left: 13%;
-    margin-right: 13%; 
+    margin-left: 10%;
+    margin-right: 10%; 
     margin-top: 50px;
     margin-bottom: 50px;
 }
@@ -66,75 +72,31 @@ header {
     text-decoration: none;
     font-family: "Gill Sans", sans-serif; 
     font-weight: normal;
-    padding: 5px 15px;
+    padding: 5px 25px;
     letter-spacing: 1.5px;
 }
 
 #top_row nav a:hover {
     color: rgb(157, 162, 235);
-}
+} 
+
 
 /* Index page */
 #introduction {
     width: 50%;
+    padding: 2% 0;
 }
+
+#introduction h2 {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: lighter;
+}
+
 
 #work {
 	padding: 20px 0px;
 	background-color: rgb(250, 250, 250); 
-}
-
-.card-container {
-	height: 260px;
-	margin: 50px 10%;
-	padding: 0px 50px;
-	display: flex;
-}
-
-.project-additionalinfo {
-	flex: 30%;
-	padding-right: 20px;
-	padding-top: 10px;
-	font-family: "Gill Sans";
-	font-weight: lighter;
-    font-style: italic;
-    text-align: right; 
-}
-
-.card-link {
-    display: flex;
-    flex: 90%; 
-}
-
-.project-card {
-    display: flex;
-    background-color: rgb(255, 255, 255);
-    flex: 70%; 
-    border-radius: 10px;
-}
-
-.project-card:hover {
-    box-shadow: 0 8px 16px 0 rgb(0,0,0,0.2); 
-}
-
-.card-img {
-    flex: 50%;
-    margin: 3%; 
-}
-
-.card-info {
-    flex: 50%;
-    margin: 2%; 
-}
-
-#work img {
-    max-width: 100%;
-    max-height: 100%; 
-    background-size: cover;
-    width: 100%;
-    height: auto;
-    /*object-fit: scale-down;*/
-    border-radius: 25px;
 }
 
 #work a {
@@ -147,15 +109,26 @@ header {
     font-size: 18px;
 }
 
-.card-date {
-    font-size: 12px;
-    font-style: italic; 
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgb(0,0,0,0.2); 
+}
+.card-deck {
+    margin: 5% 10%;
 }
 
 /* Projects */
 .project-container {
     width: 55%; 
     margin: auto;
+}
+
+.project-container a {
+    color: rgb(157, 162, 235);
+    text-decoration: none;
+}
+
+.project-container img {
+    padding-bottom: 5%;
 }
 
 .project-section {
@@ -169,13 +142,23 @@ header {
 /* About */
 #about-container {
     display: flex;
-    width: 60%; 
-    margin: 100px auto;
+    width: 74%; 
+    margin: auto;
 }
 
-#about-content {
+#about-text {
+    padding: 30px; 
     flex: 50%;
-    padding: 15px;
+}
+
+#about-me {
+    padding: 30px;
+    flex: 50%;
+}
+
+#about-text a{
+    color: rgb(157, 162, 235);
+    text-decoration: none;
 }
 
 #about-container a{
@@ -186,4 +169,24 @@ header {
 footer {
     text-align: center; 
     padding: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+    .project-container {
+        width: 80%;
+    }
+
+    .card-deck {
+        display: flex;
+        flex-direction:column;
+      }
+
+    .card {
+        margin: 10%;
+    }
+
+    #about-container {
+        display: flex;
+        flex-direction: column;
+    }
 }

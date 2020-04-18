@@ -7,7 +7,13 @@
     <meta charset="utf-8">
 
     <!-- External Links to CSS files -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!-- Externl links to JS files -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <link rel="shortcut icon" type="image/png" href="images/logo.png">
 
@@ -17,10 +23,18 @@
     <div id="top_row">
         <header>
             <a href="index.html"><img src="images/logo.png" alt="logo" width=70px></a>
-            <nav>
-                <a class="selected" href="index.html">WORK</a>
-                <a href="Kate Zhao_Resume.pdf" target="_blank">RESUME</a>
-                <a href="about.html">ABOUT</a>
+
+            <nav class="navbar navbar-expand-lg navbar-light">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto mt-3">
+                <a class="selected nav-item nav-link ml-auto active mb-2 pr-0" href="index.html">WORK</span></a>
+                <a class="nav-item nav-link ml-auto mb-2 pr-0" href="Kate Zhao_Resume.pdf" target="_blank">RESUME</a>
+                <a class="nav-item nav-link ml-auto pr-0" href="about.html">ABOUT</a>
+                </div>
+            </div>
             </nav>
         </header>
     </div>
@@ -104,26 +118,30 @@
             <h2>Storyboarding Methodology: Speed Dating</h2>
             <p>I storyboarded my top 4 concepts and got user feedback from 20 people to see which concepts I should move forward with.</p>
             <p>When getting user feedback, questions I considered were:</p>
-            <ul>
+            <ol>
                 <li>How does this solution improve their current state?</li>
                 <li>Could they see themselves using it?</li>
                 <li>What would they do differently?</li>
-            </ul>
+            </ol>
 
             <h2>Storyboarding Insights</h2>
 
             <p>Concept 1: Contacting the Closest Worker</p>
             <img src="images/fix_concept1.png" alt="concept1">
             <p align="center">Users liked immediacy and convenience of a mobile app</p>
+            <br><br>
             <p>Concept 2: Integrating Multiple Platforms</p>
             <img src="images/fix_concept2.png" alt="concept2">
             <p align="center">Users did not like this and would not use it</p>
+            <br><br>
             <p>Concept 3: Request Using Photos/Location</p>
             <img src="images/fix_concept3.png" alt="concept3">
             <p align="center">Users like the concept, but for indoor facilities</p>
+            <br><br>
             <p>Concept 4: Making Work Orders Public</p>
             <img src="images/fix_concept4.jpg" alt="concept4">
             <p align="center">Users liked this because it would reduce anxiety and uncertainty</p>
+            <br>
         </div>
 
         <div class="project-section">
@@ -131,14 +149,14 @@
             <p>A mobile app that makes the experience of submitting personal maintenance requests fast and convenient by focusing on transparency, accuracy, and effective communication. </p>
 
             <h2>Why?</h2>
-            <p>Platform: Mobile apps are convenient and easy to use because students are already familiar with them</p>
-            <p>Purpose: Mainly for personal issues because students have less interest in reporting issues for public facilities</p>
+            <p><span style="font-weight: normal;"> Platform:</span> Mobile apps are convenient and easy to use because students are already familiar with them</p>
+            <p><span style="font-weight: normal;"> Purpose:</span> Mainly for personal issues because students have less interest in reporting issues for public facilities</p>
 
             <h2>Solution Focus Points</h2>
             <ol>
-                <li>Transparency because students don't like the uncertainty of the current process. The solution will make work orders public.</li>
-                <li>Communication because it will decrease frustrations for both parties. The solution will allow maintenance workers to be contacted directly.</li>
-                <li>Accuracy because workers want to be more efficient. The solution will allow users to attach photos and drop locations when submitting work orders</li>
+                <li><span style="font-weight: normal;"> Transparency</span> because students don't like the uncertainty of the current process. The solution will make work orders public.</li>
+                <li><span style="font-weight: normal;"> Communication</span>  because it will decrease frustrations for both parties. The solution will allow maintenance workers to be contacted directly.</li>
+                <li><span style="font-weight: normal;"> Accuracy </span> because workers want to be more efficient. The solution will allow users to attach photos and drop locations when submitting work orders</li>
             </ol>
         </div>
 
@@ -169,22 +187,22 @@
             <img src="images/fix_request2.png" alt="request accepted screen design">
 
             <h2>Final Design</h2>
-            <p>I prototyped the final design using <a href="https://invis.io/UWW4P237NBM">InVision.</a></p>
+            <p>I prototyped the final design using <a href="https://invis.io/UWW4P237NBM" target="_blank">Invision.</span></a></p>
         </div>
 
         <div class="project-section">
             <h3>FINAL THOUGHTS</h3>
             <ul>
-                <li>There’s no right answer, just well supported ones! I was anxious about continuing the process with the wrong solutions, but I know I chose wisely because I had so much research and user feedback backing my choice.</li>
+                <li><span style="font-weight: normal;"> There are no right answers, just well supported ones!</span> I was anxious about continuing the process with the wrong solutions, but I know I chose wisely because I had so much research and user feedback backing my choice.</li>
                 <br>
-                <li>You don’t know anything because you are not the user. My first design iteration made complete sense to me, but everyone I tested on had no idea how it worked. This experience just reaffirmed what I already knew - user testing is important!</li>
+                <li><span style="font-weight: normal;"> You don't know anything because you are not the user. </span>My first design iteration made complete sense to me, but everyone I tested on had no idea how it worked. This experience just reaffirmed what I already knew - user testing is important!</li>
             </ul>
         </div>
 
     </div>
 
     <footer>
-        &copy; Kate Zhao<br>
+        &copy; Created by Kate Zhao<br>
     </footer>
 </body>
 </html>
