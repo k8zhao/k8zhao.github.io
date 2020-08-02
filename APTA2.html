@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Meta tags -->
+        <meta name="author" content="Kate Zhao">
+        <meta name="description" content="Kate Zhao Professional Website">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    
+        <!-- External Links to CSS files -->
+        <link rel="stylesheet" type="text/css" href="style2.css">
+    
+    
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    
+    
+        <link rel="shortcut icon" type="image/png" href="images2/logo.png">
+    
+        <title>Kate Zhao</title>
+    </head>
+<body>
+    <div id="top-row">
+        <a id="name" href="index2.html"><span style="font-weight: 600" >Kate</span> Zhao</a>
+
+        <nav>
+            <a class="active" href="index2.html">WORK</a>
+            <a href="play2.html">PLAY</a>
+            <a href="Kate Zhao - Resume.pdf" target="_blank">RESUME</a>
+            <a href="about2.html">ME</a>
+        </nav>
+    </div>
+
+
+
+    <div class="project-wrapper">
+        <div class="project-intro">
+            <h1 class="project-title">APTA: Redesigning Online Tutoring Systems </h1>
+            <p>APTA (Adaptive Peer Tutoring Assistant) is a peer tutoring system that allows students to work collaboratively on math problems. This platform facilitates a tutor-tutee relationship between students and assists peer tutors on how to give better advice. In light of COVID-19, I was working with Katrina Yu to research how APTA could be adapted to an online learning environment.</p>
+            <br>
+            <p><span style="font-weight: 500">Especially in light of COVID-19 where the majority of learning is now remote, it’s important to transfer as many aspects of a classroom context as possible in order to create a consistent learning experience for students and a seamless transition.</span></p>
+        </div>
+    </div>
+    <div class="project-top-photo" id="apta-cover"></div>
+
+
+    <div class="project-wrapper">
+        <div class="project-section-title">
+            <h3>PROCESS OVERVIEW</h3>
+        </div>
+        <div class="project-section-text">
+            <p>With such a vague goal of adapting APTA to an online learning environment, we followed a double diamond design process in order to narrow down the scope of our project. A LOT of time was spent within the first diamond - familiarizing ourselves with literature and bouncing ideas off other researchers in the lab. There were a lot of different directions this project could head in.</p>
+        </div>
+        <div class="project-section-img">
+            <img src="images2/apta_process.png">
+        </div>
+
+        <div class="project-section-title">
+            <h3>PROJECT FOCUS</h3>
+        </div>
+        <div class="project-section-right-text">
+            <h5 style="font-size: 20px; color: rgb(48,48,48,.7)">01 Social translucence</h5>
+            <br>
+            <h5 style="font-size: 20px; color: rgb(48,48,48,.7)">02 Continuous student engagement</h5>
+        </div>
+        <div class="project-section-text">
+            <p style="margin-top:3em">After defining our project, we realized after reviewing insights from a pilot study done in March that many of the issues the children found then were similar to what we were finding now. While we had hoped to focus more on implementing the ideas above, it was clear that the poor UI along with the flawed user flow would prevent us from doing so if not addressed first. At this point, we decided to shift gears. Many problems we found also dealt with ideas of social translucence and promoting continuous conversation, so we were still able to incorporate ideas from our initial research. </p>
+        </div>
+
+        <div class="project-section-title">
+            <h3>USER RESEARCH: INTERVIEWS</h3>
+        </div>
+        <div class="project-section-text">
+            <p>After interviewing teachers, we had a better understanding of the: </p>
+            <ul>
+                <li>Necessary features needed to be implemented for remote teaching</li>
+                <li>Pain points of intelligent tutoring systems in remote teaching</li>
+            </ul>
+        </div>
+
+        <div class="project-section-title">
+            <h3>WIREFRAMING</h3>
+        </div>
+        <div class="project-section-text">
+            <h4 class = "project-section-subtitle">Chat Feature</h4>
+            <p>One of the first things we wanted to tackle was the chat feature. Since chats are used on a lot of collaborative/social platforms, there is a greater expectation for the chat to perform as expected. We wanted to make it as intuitive as possible.</p>
+        </div>
+        <div class="project-section-img">
+            <img src="images2/apta_chat.png">
+        </div>
+        <div class="project-section-img">
+            <img src="images2/apta_chattest.png">
+        </div>
+
+        <div class="project-section-text">
+            <h4 class = "project-section-subtitle">Errors</h4>
+            <p>We decided to change the flow of the tutor/tutee interaction. Before, the tutee was limited to inputting one step at a time (e.g. waiting for the tutor to grade every step before they could move on). However, it is not likely that a student will need help on every single step so this procedure creates a lot of ‘waiting time’. We want to decrease this by allowing the tutee to move at their own pace, while the tutor lags behind grading at their own pace. This change forced us to think about what would happen if the tutee inputs an incorrect step:</p>
+            <ul>
+                <li>How would they be informed of their mistake?</li>
+                <li>How would they be able to correct it?</li>
+            </ul>
+        </div>
+        <div class="project-section-img">
+            <img src="images2/apta_error_storyboard.png">
+        </div>
+
+        <div class="project-section-text">
+            <h4 class = "project-section-subtitle">Redesign Idea: Sketchpad</h4>
+            <p>From our teacher interviews, we gathered that the way in which students and teachers explain math is very different from what could be reproduced with a chat. One teacher explained that she uses a lot of annotations (e.g. circling, underlining, arrows) when explaining complex ideas. This is lost when working in a remote learning environment. We played around with this idea:</p>
+        </div>
+        <div class="project-section-img">
+            <img src="images2/apta_sketchpad.png">
+        </div>
+
+
+        <div class="project-section-title">
+            <h3>FINAL THOUGHTS</h3>
+        </div>
+        <div class="project-section-text">
+            <p><span style="font-weight: 500">Sometimes no direction is the best direction.</span> It’s okay to not know where you’re headed! Katrina and I spent weeks trying to narrow down the scope of our project and we sometimes felt like we weren’t accomplishing anything because there was nothing tangible to show for our efforts. However, we were researching, gathering data and insights, and eliminating ideas that were not effective. By the end, we really learned how to take comfort in the unknown - at the end of the day, that’s what research is all about!</p>
+            <br>
+            <p><span style="font-weight: 500">Familiarity is your enemy. </span>There are so many little details that end up being very significant that you gloss over because you know your project so well. With these long-term projects it’s even more important to get feedback - either from users or even just another pair of eyes from someone you’re working with. 
+            </p>
+        </div>
+    </div>
+</body>
+</html> 
