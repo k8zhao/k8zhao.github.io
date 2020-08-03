@@ -2,14 +2,14 @@ body {
     color: #303030;
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
     margin: 0;
 }
 
 li {
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
     margin: 0;
     line-height: 1.8;
 }
@@ -30,15 +30,15 @@ h2 {
 
 h3 {
     font-family: "Montserrat", sans-serif;
-    font-size: 20px;
-    font-weight: 400; 
+    font-size: 18px;
+    font-weight: 500; 
     margin: 0;
 }
 
 h4 {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 600;
     margin: 0;
 }
 
@@ -59,7 +59,7 @@ h6 {
 p {
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
     margin: 0;
     line-height: 1.8;
 }
@@ -115,7 +115,7 @@ nav a:hover {
 
 .box {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     /*grid-template-columns: repeat(3, 1fr);*/
     grid-row-gap: 1em;
     grid-column-gap: 2em;
@@ -319,6 +319,11 @@ nav {
 .project-section-right-text {
     grid-column: 4/6; 
     margin-top: 3em;
+}
+
+.gray-right-text {
+    font-size: 18px;
+    color: rgb(48,48,48,.7); 
 }
 
 .project-section-subtitle {
