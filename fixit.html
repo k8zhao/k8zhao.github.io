@@ -8,11 +8,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     
         <!-- External Links to CSS files -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
         <link rel="stylesheet" type="text/css" href="style.css">
     
     
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
     
     
         <link rel="shortcut icon" type="image/png" href="images2/logo.png">
@@ -20,15 +26,25 @@
         <title>Kate Zhao</title>
     </head>
 <body>
-    <div id="top-row">
-        <a id="name" href="index.html"><span style="font-weight: 600" >Kate</span> Zhao</a>
-
-        <nav>
-            <a class="active" href="index.html">Work</a>
-            <a href="play.html">Play</a>
-            <a href="Kate Zhao - Resume.pdf" target="_blank">Resume</a>
-            <a href="about.html">Me</a>
-        </nav>
+    <div id="mynav">
+        <div>
+            <a id="name" href="index.html"><span style="font-weight: 600" >Kate</span> Zhao</a>
+        </div>
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto mt-3">
+                    <a class="selected nav-item nav-link ml-auto active mb-2 pr-0" href="index.html">Work</span></a>
+                    <a class="nav-item nav-link ml-auto mb-2 pr-0" href="play.html">Play</span></a>
+                    <a class="nav-item nav-link ml-auto mb-2 pr-0" href="Kate Zhao - Resume.pdf" target="_blank">Resume</a>
+                    <a class="nav-item nav-link ml-auto pr-0" href="about.html">Me</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </div>
 
 
@@ -36,7 +52,7 @@
     <div class="project-wrapper">
         <div class="project-intro">
             <h1 class="project-title">FIXIT</h1>
-            <p>I was inspired to work on this personal project because I work at the Cohon University Center Information Desk where my supervisors don't have the best communication with the Facilities Management Services on campus. Maintaining efficient communication is critical in running the University Center smoothly. My peers also seem to have similar problems with the maintenance request process. I thought this would be a fun and relevant project to take on.</p>
+            <p>This was a <span style="font-weight: 600">week-long personal design project</span> inspired by my supervisors at the Cohon University Center who don't have the best communication with Facilities Management Services on campus. Maintaining efficient communication is critical in running the University Center smoothly. My peers also seem to have similar problems with the maintenance request process. I thought this would be a fun and relevant project to take on.</p>
         </div>
     </div>
     <div class="project-top-photo" id="fixit-cover"></div>
@@ -198,6 +214,13 @@
 
         <div class="project-section-text">
             <p>I prototyped the final design using <a href="https://invis.io/UWW4P237NBM" target="_blank">Invision.</a></p>
+            <br>
+            <p>If I were to continue working on this project, I would use these <span style="font-weight: 600">success metrics</span> to measure the success of my design: </p>
+            <ul>
+                <li>How fast a user is able submit a maintenance request</li>
+                <li>How easily a worker is able to find the location of the maintenance issue</li>
+                <li>How efficiently either parties are able to contact each other </li>
+            </ul>
         </div>
 
         <div class="empty-row"></div>
@@ -212,5 +235,9 @@
         </div>
 
     </div>
+
+    <footer>
+        &copy; Kate Zhao 2020<br>
+    </footer>
 </body>
 </html> 

@@ -1,3 +1,38 @@
+#mynav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2em 10%;
+}
+
+#mynav nav {
+    float: right;
+    padding: 0;
+    margin: 0;
+}
+
+#mynav nav a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color:#303030;
+    text-decoration: none;
+    margin: 0 12px;
+
+    padding: 5px 25px;
+}
+
+#mynav nav a.selected {
+    color: #747CF5;
+}
+
+#mynav nav a:hover {
+    color: rgb(48,48,48, .7); 
+}
+
+#mynav > div {
+    align-self: center; 
+}
+
 body {
     color: #303030;
     font-family: "Open Sans", sans-serif;
@@ -78,7 +113,7 @@ a:hover {
 }
 
 
-nav a {
+/* nav a {
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -95,6 +130,7 @@ nav a {
 nav a:hover {
     color: rgb(48,48,48, .7); 
 }
+*/
 
 #name {
     font-family: "Montserrat", sans-serif;
@@ -169,11 +205,11 @@ nav {
 #contactlinks > ul > li{
     list-style-type: none;
     display: inline;
-    padding-right: 50px;
+    padding-right: 40px;
 
     font-family: "Open Sans", sans-serif;
-    font-size: 16px;
-    font-weight: 500; 
+    font-size: 14px;
+    font-weight: 400; 
     margin: 0;
 }
 
@@ -196,6 +232,7 @@ nav {
     width: 100%;
     height: auto;
 }
+
 
 .play-wrapper2 {
     display: grid;
@@ -224,12 +261,16 @@ nav {
     margin: 4em 0;
 }
 
+
 #about-wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
     background-color: #F8F7F7;
     padding: 10%;
     margin: auto;
+}
+
+#about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 #about-right {
@@ -239,7 +280,9 @@ nav {
 #about-left {
     margin: 5%;
     align-self: center;
+    justify-self: center;
 }
+
 
 #about-quote {
     text-align: center;
@@ -331,6 +374,10 @@ nav {
     margin-bottom: 1em;
 }
 
+.project-section-caption {
+    margin-bottom: 3em; 
+}
+
 .project-section-text {
     grid-column: 2/6;
 }
@@ -373,6 +420,13 @@ nav {
     grid-column: 1/7;
 }
 
+footer {
+    clear: both;
+    margin: 0;
+    padding: 2em;
+    text-align: center; 
+}
+
 
 /*
 .img {
@@ -382,4 +436,76 @@ nav {
 }
 */
 
+
+@media only screen and (max-width: 768px) {
+    .play-wrapper2 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); 
+        grid-gap: 2em;
+        padding: 4em 10%;
+        background-color: #F8F7F7;
+    }
+    
+    .play-wrapper2 img {
+        object-fit: cover;
+        width: 100%;
+    }
+    
+    .play-info2 {
+        margin-bottom: 1em;
+        grid-column: 1/2;
+    }
+
+    #about-left img {
+        display:block;
+        margin:auto;
+    }
+
+    .project-wrapper {
+        margin: 10%;
+        display: block;
+    }
+
+    #fixit-cover {
+        background: url("images2/fixit_cover.png");
+        background-size: cover;
+        height: 250px;
+        background-position: center; 
+    }
+    
+    #apta-cover {
+        background: url("images2/apta_cover.png");
+        background-size: cover;
+        height: 250px;
+        background-position: center; 
+    }
+    
+    #career-cover {
+        background: url("images2/career_cover.png");
+        background-size: cover;
+        height: 250px;
+        background-position: center; 
+    }
+    
+    #oh-cover {
+        background: url("images2/OH_cover.png");
+        background-size: cover;
+        height: 250px;
+        background-position: center; 
+    }
+    
+    #c3d-cover {
+        background: url("images2/c3d_cover.png");
+        background-size: cover;
+        height: 250px;
+        background-position: center; 
+    }
+    
+    #teach-cover {
+        background: url("images2/teach_cover.png");
+        background-size: cover;
+        height: 250px;
+        background-position: center; 
+    }
+}
 
