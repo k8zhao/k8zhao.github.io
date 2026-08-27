@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+    <title>About — Kate Zhao</title>
+    <!-- FILL IN: about page meta description -->
+    <meta name="description" content="About Your Name." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/components.css" />
+  </head>
+  <body class="project-page about-page">
+    <!-- ===================== NAV ===================== -->
+    <div class="container">
+      <nav class="site-nav grid">
+        <a class="site-nav__brand nav-link" href="index.html">Kate Zhao</a>
+        <div class="site-nav__links">
+          <a class="nav-link" href="about.html">About</a>
+          <a
+            class="nav-link"
+            href="assets/resume.pdf"
+            target="_blank"
+            rel="noopener"
+            >Resume</a
+          >
+        </div>
+      </nav>
+    </div>
+
+    <!-- ===================== ABOUT ===================== -->
+    <main class="container">
+      <div class="about-layout grid">
+        <div class="about-layout__portrait stagger-item" style="--i: 0">
+          <img
+            class="about-layout__image"
+            src="assets/images/about/about-me.jpg"
+            alt="Kate Zhao"
+          />
+        </div>
+
+        <div class="about-layout__content">
+          <div class="about-layout__bio">
+            <section
+              class="about-copy stagger-item stagger-item--from-right"
+              style="--i: 1"
+            >
+              <h1 class="about-copy__title t-serif-2xl">Hi, I’m Kate!</h1>
+              <p>
+                I’m currently designing AI experiences in the browser at
+                <a
+                  class="about-copy__link"
+                  href="https://microsoft.ai/"
+                  target="_blank"
+                  rel="noopener"
+                  ><span class="about-copy__link-line">Microsoft AI</span></a
+                >.
+              </p>
+              <p>
+                I studied Information Systems, Human-Computer Interaction, and
+                Business Administration at
+                <a
+                  class="about-copy__link"
+                  href="https://www.cmu.edu/"
+                  target="_blank"
+                  rel="noopener"
+                  ><span class="about-copy__link-line">Carnegie Mellon</span>
+                  <span class="about-copy__link-line">University</span></a
+                >.
+              </p>
+            </section>
+
+            <section
+              class="about-copy stagger-item stagger-item--from-right"
+              style="--i: 2"
+            >
+              <h2 class="about-copy__title t-serif-2xl">
+                Work hard, play harder
+              </h2>
+              <p>
+                I believe that in order to succeed as an adult, we cannot forget
+                to play. Outside of design, I have the most fun:
+              </p>
+              <ul class="about-copy__list">
+                <li>making music</li>
+                <li>chasing good food</li>
+                <li>training for my next endurance race</li>
+              </ul>
+              <p>
+                There’s so much to do and be curious about — it’s
+                <a
+                  class="about-copy__link"
+                  href="https://app.notion.com/p/1b1c44425b9280109afdd29eb116bef9?v=1b1c44425b9280df89fe000cc11ba319&amp;source=copy_link"
+                  target="_blank"
+                  rel="noopener"
+                  ><span class="about-copy__link-line">impossible</span></a
+                >
+                I’ll get to it all in this lifetime, but I’ll surely try.
+              </p>
+            </section>
+          </div>
+        </div>
+
+        <section class="about-currently reveal">
+          <h2 class="t-serif-2xl">Currently</h2>
+          <div class="project-details">
+            <div class="project-details__item">
+              <p class="t-label">ROLE</p>
+              <p class="t-base">Product designer</p>
+            </div>
+            <div class="project-details__item">
+              <p class="t-label">COMPANY</p>
+              <p class="t-base">Microsoft AI</p>
+            </div>
+            <div class="project-details__item">
+              <p class="t-label">LOCATION</p>
+              <p class="t-base">Seattle, WA</p>
+            </div>
+            <div class="project-details__item">
+              <p class="t-label">CONTACT</p>
+              <p class="t-base">zetak3600@gmail.com</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="container">
+      <div class="site-footer t-base">
+        <span>© Kate Zhao 2026</span>
+        <a class="nav-link" href="index.html">Back to work</a>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
