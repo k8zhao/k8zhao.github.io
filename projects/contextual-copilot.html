@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+    <title>Contextual Copilot — Kate Zhao</title>
+    <meta
+      name="description"
+      content="A custom Copilot component designed for contextual scenarios across Microsoft Edge."
+    />
+    <script>
+      if (sessionStorage.getItem("contextual-copilot-unlocked") !== "true") {
+        window.location.replace(
+          "protected-project.html?project=contextual-copilot",
+        );
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/tokens.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+  </head>
+  <body class="project-page">
+    <div class="container">
+      <nav class="site-nav grid">
+        <a class="site-nav__brand nav-link" href="../index.html">Kate Zhao</a>
+        <div class="site-nav__links">
+          <a class="nav-link" href="../about.html">About</a>
+          <a
+            class="nav-link"
+            href="../assets/resume.pdf"
+            target="_blank"
+            rel="noopener"
+            >Resume</a
+          >
+        </div>
+      </nav>
+    </div>
+
+    <header class="container">
+      <div class="project-header grid">
+        <h1
+          class="project-header__title t-serif-3xl stagger-item"
+          style="--i: 0"
+        >
+          Contextual Copilot
+        </h1>
+        <div class="project-details stagger-item" style="--i: 1">
+          <div class="project-details__item">
+            <p class="t-label">ROLE</p>
+            <p class="t-base">Product designer</p>
+          </div>
+          <div class="project-details__item">
+            <p class="t-label">SCOPE</p>
+            <p class="t-base">Contextual AI interactions in Edge</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="project-hero-img reveal">
+      <img
+        class="project-section__img"
+        src="../assets/images/copilot-in-edge/contextual copilot.png"
+        alt="Contextual Copilot interface in Microsoft Edge"
+      />
+    </div>
+
+    <main class="container">
+      <div class="project-body grid">
+        <div class="project-body__content">
+          <p class="project-intro reveal">
+            A custom Copilot component that works in any contextual scenario
+            across Edge.
+          </p>
+
+          <section class="project-section reveal">
+            <div class="project-section__head grid">
+              <h2 class="project-section__title t-serif-2xl">Overview</h2>
+              <div class="project-section__text">
+                <p class="project-section__body">
+                  Designed to bring Copilot to users in context without opening
+                  the side panel. The component needed to work across any Edge
+                  surface, consumer and commercial, which meant designing
+                  something neutral and minimal enough to fit anywhere without
+                  feeling out of place. Starting with the context menu as the
+                  first test case, the pattern is now being adopted across three
+                  teams and multiple feature areas in Edge.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="container">
+      <div class="site-footer t-base">
+        <span>© Kate Zhao 2026</span>
+        <a class="nav-link" href="../index.html">Back to work</a>
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>

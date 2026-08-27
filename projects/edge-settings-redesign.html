@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+    <title>Edge settings redesign — Kate Zhao</title>
+    <meta
+      name="description"
+      content="End-to-end redesign of Microsoft Edge Settings and the WebUI 2.0 framework."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Paths step up one level since this file lives in /projects -->
+    <link rel="stylesheet" href="../css/tokens.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+  </head>
+  <body class="project-page">
+    <!-- ===================== NAV ===================== -->
+    <div class="container">
+      <nav class="site-nav grid">
+        <a class="site-nav__brand nav-link" href="../index.html">Kate Zhao</a>
+        <div class="site-nav__links">
+          <a class="nav-link" href="../about.html">About</a>
+          <a
+            class="nav-link"
+            href="../assets/resume.pdf"
+            target="_blank"
+            rel="noopener"
+            >Resume</a
+          >
+        </div>
+      </nav>
+    </div>
+
+    <!-- ===================== PROJECT HEADER ===================== -->
+    <header class="container">
+      <div class="project-header grid">
+        <!-- Title (cols 1–4) -->
+        <h1
+          class="project-header__title t-serif-3xl stagger-item"
+          style="--i: 0"
+        >
+          Edge settings redesign
+        </h1>
+
+        <!-- Detail columns: timeline / role / scope / impact (cols 5–12) -->
+        <div class="project-details stagger-item" style="--i: 1">
+          <div class="project-details__item">
+            <p class="t-label">TIMELINE</p>
+            <p class="t-base">3 months</p>
+          </div>
+          <div class="project-details__item">
+            <p class="t-label">ROLE</p>
+            <p class="t-base">Product designer</p>
+          </div>
+          <div class="project-details__item">
+            <p class="t-label">SCOPE</p>
+            <p class="t-base">IA + Design systems</p>
+          </div>
+          <div class="project-details__item">
+            <p class="t-label">IMPACT</p>
+            <p class="t-base">40-70% faster performance</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== HERO IMAGE (full bleed) ===================== -->
+    <div class="project-hero-img reveal">
+      <img
+        src="../assets/images/edge-settings-redesign/settings-hero.png"
+        alt="Edge settings redesign hero"
+        class="project-hero-img__img"
+        style="--ratio: 1440 / 562"
+      />
+    </div>
+
+    <!-- ===================== PROJECT BODY ===================== -->
+    <main class="container">
+      <div class="project-body grid">
+        <div class="project-body__content">
+          <!-- Section: Problem (text + 3-up image row) -->
+          <section class="project-section reveal">
+            <div class="project-section__head grid">
+              <h2 class="project-section__title t-serif-2xl">Problem</h2>
+              <div class="project-section__text">
+                <p class="project-section__lead">
+                  Research flagged settings as a churn signal. I found that both
+                  the experience and the underlying infrastructure were
+                  fragmented.
+                </p>
+                <p class="project-section__body">
+                  Settings had grown organically across teams with no shared
+                  system and no single owner — every team shipped features
+                  independently, with no regard for the holistic experience. The
+                  result was a surface that was hard for users to navigate and
+                  increasingly difficult to maintain.
+                </p>
+              </div>
+            </div>
+            <div class="project-images project-images--1">
+              <div class="project-video-crop">
+                <video
+                  class="project-section__video"
+                  src="../assets/images/edge-settings-redesign/settings-before-bg.mp4"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                ></video>
+              </div>
+              <img
+                class="project-section__img"
+                src="../assets/images/edge-settings-redesign/settings-problem-beige.png"
+                alt="Annotated breakdown of the fragmented settings experience"
+              />
+            </div>
+          </section>
+
+          <!-- Section: Solution (text + full-width image) -->
+          <section class="project-section reveal">
+            <div class="project-section__head grid">
+              <h2 class="project-section__title t-serif-2xl">Solution</h2>
+              <div class="project-section__text">
+                <p class="project-section__lead">
+                  A new component system and design framework — including
+                  principles and content standards — built in parallel with a
+                  platform migration to WebUI 2.0
+                </p>
+                <p class="project-section__body">
+                  I audited the full settings surface and rebuilt the component
+                  library from the ground up — creating a single, rationalized
+                  system that every team shipping into settings could build
+                  from. Alongside the redesign, I defined governing principles
+                  and content standards to ensure the surface stayed coherent as
+                  the product continued to grow.
+                </p>
+              </div>
+            </div>
+            <div class="project-images project-images--1">
+              <img
+                class="project-section__img"
+                src="../assets/images/edge-settings-redesign/settings-solution-hero.png"
+                alt="Redesigned Edge settings surface"
+              />
+              <img
+                class="project-section__img"
+                src="../assets/images/edge-settings-redesign/settings-solution-components.png"
+                alt="New settings component system"
+              />
+            </div>
+          </section>
+
+          <!-- Section: Process (text + 3-up columns w/ visuals) -->
+          <section class="project-section reveal">
+            <div class="project-section__head grid">
+              <h2 class="project-section__title t-serif-2xl">Process</h2>
+              <div class="project-section__text">
+                <p class="project-section__lead">
+                  A heuristic evaluation of the entire surface revealed the
+                  systemic problems the redesign needed to solve. The audit led
+                  to three governing principles:
+                </p>
+              </div>
+            </div>
+            <div class="project-columns">
+              <div class="project-column">
+                <p class="project-column__title">Progressive disclosure</p>
+                <p class="project-column__body">
+                  Only show what's relevant to the user, when it's relevant
+                </p>
+              </div>
+              <div class="project-column">
+                <p class="project-column__title">Action-oriented</p>
+                <p class="project-column__body">
+                  Every setting must have a clear action attached to it
+                </p>
+              </div>
+              <div class="project-column">
+                <p class="project-column__title">Clear, concise, unbiased</p>
+                <p class="project-column__body">
+                  Settings should feel like a utility users can trust, not a
+                  product being sold to them
+                </p>
+              </div>
+            </div>
+            <div class="project-images project-images--3">
+              <div class="project-media-zoom" style="--zoom: 1.75">
+                <video
+                  class="project-section__video"
+                  src="../assets/images/edge-settings-redesign/settings-process-pd.mp4"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                ></video>
+              </div>
+              <div class="project-media-zoom" style="--zoom: 1.25">
+                <img
+                  class="project-section__img"
+                  src="../assets/images/edge-settings-redesign/settings-process-action-beige.png"
+                  alt="Action-oriented settings pattern"
+                />
+              </div>
+              <img
+                class="project-section__img"
+                src="../assets/images/edge-settings-redesign/settings-process-utility-beige.png"
+                alt="Clear, concise, unbiased settings pattern"
+              />
+            </div>
+          </section>
+
+          <!-- Section: Impact (text only) -->
+          <section class="project-section reveal">
+            <div class="project-section__head grid">
+              <h2 class="project-section__title t-serif-2xl">Impact</h2>
+              <div class="project-section__text">
+                <p class="project-section__body">
+                  As the sole designer on this project, I owned the redesign end
+                  to end alongside one PM — onboarding over 60 engineers across
+                  feature teams onto the new framework and maintaining ownership
+                  of the surface going forward. The migration from React to
+                  WebUI 2.0 delivered 40% faster performance on high and
+                  mid-class machines and 70% faster on lower-end devices. For
+                  teams building in settings, the framework removes the
+                  guesswork — design decisions are already made, components
+                  exist, and the system is built to absorb future changes
+                  without regression.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="container">
+      <div class="site-footer t-base">
+        <span>© Kate Zhao 2026</span>
+        <a class="nav-link" href="../index.html">Back to work</a>
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>

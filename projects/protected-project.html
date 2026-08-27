@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+    <title>Password protected project — Kate Zhao</title>
+    <meta name="description" content="This case study is password protected." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/tokens.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="site-nav grid">
+        <a class="site-nav__brand nav-link" href="../index.html">Kate Zhao</a>
+        <div class="site-nav__links">
+          <a class="nav-link" href="../about.html">About</a>
+          <a
+            class="nav-link"
+            href="../assets/resume.pdf"
+            target="_blank"
+            rel="noopener"
+            >Resume</a
+          >
+        </div>
+      </nav>
+    </div>
+
+    <main class="container password-gate">
+      <div class="grid">
+        <section class="password-gate__content stagger-item" style="--i: 0">
+          <h1 class="t-serif-3xl">This project is password protected</h1>
+          <p class="password-gate__copy t-base">
+            Enter the password to view this case study. Feel free to schedule
+            time with me to review this work if interested!
+          </p>
+          <form class="password-gate__form" id="password-form">
+            <input
+              class="password-gate__input"
+              id="project-password"
+              name="password"
+              type="password"
+              aria-label="Password"
+              placeholder="Enter password"
+              autocomplete="current-password"
+              required
+            />
+            <button class="button" type="submit">View project</button>
+          </form>
+          <p
+            class="password-gate__error t-base"
+            id="password-error"
+            role="alert"
+            hidden
+          >
+            Incorrect password. Please try again.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <script>
+      (function () {
+        var projects = {
+          "bing-ai-image-creator": {
+            name: "Bing AI Image Creator",
+          },
+          "contextual-copilot": {
+            name: "Contextual Copilot",
+            passwordHash:
+              "5a3df89da7bf23d71ec63f111d9171c3f05047380a17812f20248e63cfded4fb",
+            destination: "contextual-copilot.html",
+          },
+        };
+        var projectKey = new URLSearchParams(window.location.search).get(
+          "project",
+        );
+        var project = projects[projectKey];
+
+        if (project) {
+          document.title = project.name + " — Kate Zhao";
+        }
+
+        document
+          .getElementById("password-form")
+          .addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            var password = document.getElementById("project-password").value;
+            var passwordData = new TextEncoder().encode(password);
+            var hashBuffer = await crypto.subtle.digest(
+              "SHA-256",
+              passwordData,
+            );
+            var passwordHash = Array.from(new Uint8Array(hashBuffer))
+              .map(function (byte) {
+                return byte.toString(16).padStart(2, "0");
+              })
+              .join("");
+
+            if (project && passwordHash === project.passwordHash) {
+              sessionStorage.setItem("contextual-copilot-unlocked", "true");
+              window.location.href = project.destination;
+              return;
+            }
+
+            document.getElementById("password-error").hidden = false;
+          });
+      })();
+    </script>
+  </body>
+</html>
