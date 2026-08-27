@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+    <title>Kate Zhao — Product Designer</title>
+    <!-- FILL IN: page meta description for SEO / link previews -->
+    <meta
+      name="description"
+      content="Short descriptor of who you are and what you do."
+    />
+
+    <!-- Fonts: Inter (sans) + Source Serif 4 (serif), matching Figma -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Token-first cascade: tokens -> global -> components -->
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/components.css" />
+  </head>
+  <body class="home-page">
+    <!-- ===================== HERO ===================== -->
+    <header class="hero">
+      <div class="container">
+        <!-- Top navigation -->
+        <nav class="site-nav grid">
+          <a class="site-nav__brand nav-link" href="index.html">Kate Zhao</a>
+          <div class="site-nav__links">
+            <a class="nav-link" href="about.html">About</a>
+            <a
+              class="nav-link"
+              href="assets/resume.pdf"
+              target="_blank"
+              rel="noopener"
+              >Resume</a
+            >
+          </div>
+        </nav>
+
+        <!-- Hero content laid out on the 12-col grid -->
+        <div class="hero__inner grid">
+          <!-- Intro: meta + CTA (cols 1–4) -->
+          <div class="hero__intro">
+            <div class="hero__meta t-base stagger-item">
+              <!-- FILL IN: current role / company -->
+              <p>Currently @ Microsoft AI</p>
+              <!-- FILL IN: title -->
+              <p>Product designer</p>
+              <!-- FILL IN: location -->
+              <p>Seattle, WA</p>
+            </div>
+            <a class="button stagger-item" href="#selected-work"
+              >View selected work</a
+            >
+          </div>
+
+          <!-- Profile image (cols 3–4) -->
+          <div class="hero__media stagger-item">
+            <img
+              src="assets/images/home/me-home.jpg"
+              alt="Kate Zhao"
+              class="hero__img"
+            />
+          </div>
+
+          <!-- Headline + supporting copy, stacked with a fixed 24px gap.
+               Each slides in from the right, staggered after the image. -->
+          <div class="hero__text">
+            <!-- Serif headline (overlaps the image's right edge) -->
+            <h1
+              class="hero__headline t-serif-4xl stagger-item stagger-item--from-right"
+            >
+              <em class="t-italic">human</em>-centered design in an AI-driven
+              world
+            </h1>
+
+            <!-- Supporting statement (sits 24px below the headline) -->
+            <p class="hero__copy t-lg stagger-item stagger-item--from-right">
+              <!-- FILL IN: one-sentence point of view -->
+              I believe the most powerful technology is the kind that makes life
+              feel more human
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== SELECTED WORK ===================== -->
+    <main id="selected-work" class="container">
+      <section class="gallery" aria-label="Selected work">
+        <div class="gallery__grid grid">
+          <!-- Featured project — full 12-column width -->
+          <article class="project-card gallery__item--full reveal">
+            <a class="project-card__media" href="projects/copilot-in-edge.html">
+              <img
+                class="project-card__img"
+                src="assets/images/home/copilot-thumbnail.png"
+                alt="Copilot in Edge"
+                style="--ratio: 1240 / 608"
+              />
+            </a>
+            <a
+              class="project-card__title t-serif-2xl"
+              href="projects/copilot-in-edge.html"
+              >Copilot in Edge</a
+            >
+            <p class="project-card__tag t-base">
+              Shipping AI experiences that feel native to the browser
+            </p>
+          </article>
+
+          <!-- Paired project — left half -->
+          <article class="project-card gallery__item--lead reveal">
+            <a
+              class="project-card__media"
+              href="projects/edge-settings-redesign.html"
+            >
+              <img
+                class="project-card__img"
+                src="assets/images/home/settings-thumbnail2.png"
+                alt="Edge settings redesign"
+                style="--ratio: 1 / 1"
+              />
+            </a>
+            <a
+              class="project-card__title t-serif-2xl"
+              href="projects/edge-settings-redesign.html"
+              >Edge settings redesign</a
+            >
+            <p class="project-card__tag t-base">
+              A systemic overhaul of Edge's settings surface
+            </p>
+          </article>
+
+          <!-- Paired project — right half -->
+          <article class="project-card gallery__item--lead-right reveal">
+            <a
+              class="project-card__media"
+              href="projects/protected-project.html?project=contextual-copilot"
+            >
+              <img
+                class="project-card__img"
+                src="assets/images/home/cc-thumbnail.png"
+                alt="Contextual Copilot"
+                style="--ratio: 1 / 1"
+              />
+            </a>
+            <a
+              class="project-card__title t-serif-2xl"
+              href="projects/protected-project.html?project=contextual-copilot"
+              >Contextual Copilot</a
+            >
+            <p class="project-card__tag t-base">
+              A reusable Copilot component that brings AI into context, without
+              opening the side panel
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="container">
+      <div class="site-footer t-base">
+        <span>© Kate Zhao 2026</span>
+        <a
+          class="nav-link"
+          href="https://www.linkedin.com/in/katezhao36/"
+          target="_blank"
+          rel="noopener"
+          >Ice cream &gt; coffee. Let's chat 🍦</a
+        >
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
