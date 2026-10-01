@@ -1,0 +1,275 @@
+/* ==========================================================================
+   global.css
+   Owns: reset, base element styling, typography defaults, the grid system,
+   layout primitives (.container, .grid, .page), and global animation
+   keyframes / scroll-reveal classes.
+   Must NOT define component-specific styling (see components.css).
+   Must NOT hardcode raw values — reference tokens.css only.
+   ========================================================================== */
+
+/* --- Reset ---------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: var(--text-base-size);
+  line-height: var(--text-base-line);
+  font-weight: var(--weight-regular);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* --- View Transitions (between-page morphing) ----------------------------- */
+@view-transition {
+  navigation: auto;
+}
+
+/* --- Typography utilities ------------------------------------------------- */
+.t-label {
+  font-size: var(--text-label-size);
+  line-height: var(--text-label-line);
+  font-weight: var(--weight-semibold);
+  color: var(--color-muted);
+}
+
+.t-base {
+  font-size: var(--text-base-size);
+  line-height: var(--text-base-line);
+}
+
+.t-lg {
+  font-size: var(--text-lg-size);
+  line-height: var(--text-lg-line);
+}
+
+.t-serif-2xl {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl-size);
+  line-height: var(--text-2xl-line);
+  font-weight: var(--weight-regular);
+}
+
+.t-serif-3xl {
+  font-family: var(--font-serif);
+  font-size: var(--text-3xl-size);
+  line-height: var(--text-3xl-line);
+  font-weight: var(--weight-regular);
+}
+
+.t-serif-4xl {
+  font-family: var(--font-serif);
+  font-size: var(--text-4xl-size);
+  line-height: var(--text-4xl-line);
+  font-weight: var(--weight-regular);
+}
+
+.t-muted {
+  color: var(--color-muted);
+}
+
+.t-semibold {
+  font-weight: var(--weight-semibold);
+}
+
+.t-italic {
+  font-style: italic;
+}
+
+/* --- Layout primitives ---------------------------------------------------- */
+
+/* Centered page wrapper that enforces the max width + page margins. */
+.container {
+  width: 100%;
+  max-width: var(--grid-max-width);
+  margin-inline: auto;
+  padding-inline: var(--grid-margin);
+}
+
+/* The 12-column grid. Children opt into spans via the .col-* helpers below.
+   Collapses to 2 columns on tablet and 1 column on mobile. */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  column-gap: var(--grid-gutter);
+}
+
+/* Column span helpers (desktop) */
+.col-4 {
+  grid-column: span 4;
+}
+.col-6 {
+  grid-column: span 6;
+}
+.col-8 {
+  grid-column: span 8;
+}
+.col-12 {
+  grid-column: span 12;
+}
+
+/* Explicit start positions used by the asymmetric layouts in Figma. */
+.start-5 {
+  grid-column-start: 5;
+}
+.start-7 {
+  grid-column-start: 7;
+}
+.start-9 {
+  grid-column-start: 9;
+}
+
+/* --- Scroll-reveal + entrance animation ----------------------------------- */
+/* Elements tagged .reveal start hidden; main.js adds .visible via a single
+   IntersectionObserver, and the transition below does the work. */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity var(--duration-slow) var(--ease-out),
+    transform var(--duration-slow) var(--ease-out);
+  will-change: opacity, transform;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Page-load stagger-fade. Apply .stagger to a container and .stagger-item to
+   each child; --i sets the delay multiplier. */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Slide in from the right; used for the hero headline + copy. */
+@keyframes fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(48px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.stagger-item {
+  opacity: 0;
+  animation: fade-up var(--duration-entrance) var(--ease-settle) both;
+  animation-delay: calc(var(--i, 0) * var(--stagger-step));
+}
+
+.stagger-item--from-right {
+  animation-name: fade-in-right;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .stagger-item {
+    opacity: 1;
+    animation: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* --- Responsive: tablet (2-col grid) -------------------------------------- */
+@media (max-width: 1024px) {
+  :root {
+    --grid-margin: 48px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Every span collapses to fit within 2 columns. */
+  .col-4,
+  .col-6,
+  .col-8,
+  .col-12 {
+    grid-column: span 2;
+  }
+
+  .start-5,
+  .start-7,
+  .start-9 {
+    grid-column-start: auto;
+  }
+
+  .t-serif-4xl {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+
+/* --- Responsive: mobile (1-col grid) -------------------------------------- */
+@media (max-width: 640px) {
+  :root {
+    --grid-margin: 24px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .col-4,
+  .col-6,
+  .col-8,
+  .col-12 {
+    grid-column: span 1;
+  }
+
+  .t-serif-4xl {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}

@@ -1,0 +1,114 @@
+/* ==========================================================================
+   tokens.css
+   Single source of truth for all design values.
+   Every color, spacing, typography, radius, and motion value lives here.
+   Nothing elsewhere in the codebase should hardcode a raw value — always
+   reference a token via var(--token-name).
+   Values are pulled directly from the Figma file.
+   ========================================================================== */
+
+:root {
+  /* ---------------------------------------------------------------------
+     Color
+     --------------------------------------------------------------------- */
+  --color-bg: #ffffff; /* page background (home)                   */
+  --color-surface: #faf9f7; /* warm off-white (hero, project bg, cards) */
+  --color-surface-alt: #edeae5; /* image placeholders, project hero img     */
+  --color-ink: #1a1a18; /* primary text + dark button fill          */
+  --color-ink-inverse: #faf9f7; /* text on dark surfaces (button label)     */
+  --color-muted: #8c8a86; /* secondary / supporting text + labels     */
+  --color-link: #3d3a35; /* inline text links                          */
+
+  /* ---------------------------------------------------------------------
+     Typography — families
+     --------------------------------------------------------------------- */
+  --font-sans:
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+
+  /* ---------------------------------------------------------------------
+     Typography — sizes & matching line-heights
+     Names map to the Figma type ramp (base / lg / 2xl / 3xl / 4xl + label).
+     --------------------------------------------------------------------- */
+  --text-label-size: 14px;
+  --text-label-line: 20px;
+
+  --text-base-size: 16px;
+  --text-base-line: 24px;
+
+  --text-lg-size: 20px;
+  --text-lg-line: 30px;
+
+  --text-2xl-size: 24px; /* serif subtitle                                */
+  --text-2xl-line: 32px;
+
+  --text-3xl-size: 32px; /* serif project title                          */
+  --text-3xl-line: 32px;
+
+  --text-4xl-size: 49px; /* serif hero headline                          */
+  --text-4xl-line: 61px;
+
+  /* ---------------------------------------------------------------------
+     Typography — weights
+     --------------------------------------------------------------------- */
+  --weight-regular: 400;
+  --weight-semibold: 600;
+
+  /* ---------------------------------------------------------------------
+     Spacing scale (px values observed in Figma)
+     --------------------------------------------------------------------- */
+  --space-1: 4px;
+  --space-2: 10px;
+  --space-3: 12px;
+  --space-4: 24px;
+  --space-5: 40px;
+  --space-6: 80px;
+
+  /* ---------------------------------------------------------------------
+     Layout / grid system
+     1440 frame, 100 page margins, 1240 content, 12 columns, 24 gutter.
+     --------------------------------------------------------------------- */
+  --grid-max-width: 1440px;
+  --content-max-width: 1240px;
+  --grid-margin: 100px;
+  --grid-columns: 12;
+  --grid-gutter: 24px;
+
+  /* ---------------------------------------------------------------------
+     Radius
+     --------------------------------------------------------------------- */
+  --radius-image: 0px; /* placeholders render with square corners        */
+  --radius-pill: 99px; /* buttons                                        */
+
+  /* ---------------------------------------------------------------------
+     Motion
+     --------------------------------------------------------------------- */
+  --duration-fast: 150ms;
+  --duration-base: 300ms;
+  --duration-slow: 600ms;
+  /* Page-load entrance: slow enough for hero pieces to settle into place. */
+  --duration-entrance: 950ms;
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  /* Gentle settle with a touch of overshoot for entrance animations. */
+  --ease-settle: cubic-bezier(0.22, 1.12, 0.36, 1);
+
+  /* Stagger step applied between sequential entrance animations. */
+  --stagger-step: 220ms;
+
+  /* ---------------------------------------------------------------------
+     Elevation
+     --------------------------------------------------------------------- */
+  --shadow-card: 0 18px 40px -20px rgba(26, 26, 24, 0.28);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-base: 0ms;
+    --duration-slow: 0ms;
+    --duration-entrance: 0ms;
+    --stagger-step: 0ms;
+  }
+}
