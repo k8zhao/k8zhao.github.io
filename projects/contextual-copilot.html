@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/icons/favicon.svg?v=2" type="image/svg+xml" sizes="any" />
+    <title>Contextual Copilot — Kate Zhao</title>
+    <meta
+      name="description"
+      content="A custom Copilot component designed for contextual scenarios across Microsoft Edge."
+    />
+    <script>
+      if (sessionStorage.getItem("contextual-copilot-unlocked") !== "true") {
+        window.location.replace(
+          "protected-project.html?project=contextual-copilot",
+        );
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/tokens.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+  </head>
+  <body class="project-page">
+    <div class="container">
+      <nav class="site-nav grid">
+        <a class="site-nav__brand nav-link" href="../index.html">Kate Zhao</a>
+        <div class="site-nav__links">
+          <a class="nav-link" href="../about.html">About</a>
+          <a
+            class="nav-link"
+            href="../assets/resume.pdf"
+            target="_blank"
+            rel="noopener"
+            >Resume</a
+          >
+        </div>
+      </nav>
+    </div>
+
+    <header class="container">
+      <div class="project-header grid">
+        <h1
+          class="project-header__title t-serif-3xl stagger-item"
+          style="--i: 0"
+        >
+          Contextual Copilot
+        </h1>
+        <div class="project-details stagger-item" style="--i: 1">
+          <div class="project-details__item">
+            <p class="t-label">DURATION</p>
+            <p class="t-base">3 months</p>
+          </div>
+          <div class="project-details__item">
+            <p class="t-label">ROLE</p>
+            <p class="t-base">Product designer</p>
+          </div>
+          <div class="project-details__item">
+            <p class="t-label">SCOPE</p>
+            <p class="t-base">Contextual entry point</p>
+          </div>
+          <div class="project-details__item">
+            <p class="t-label">IMPACT</p>
+            <p class="t-base">Adopted by other teams</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="project-hero-img reveal">
+      <img
+        class="project-section__img"
+        src="../assets/images/copilot-in-edge/contextual copilot.png"
+        alt="Contextual Copilot interface in Microsoft Edge"
+      />
+    </div>
+
+    <main class="container">
+      <div class="project-body grid">
+        <div class="project-body__content">
+          <section class="project-section reveal">
+            <div class="project-section__head grid">
+              <h2 class="project-section__title t-serif-2xl">Problem</h2>
+              <div class="project-section__text">
+                <p class="project-section__lead">
+                  Copilot lived in the side pane. Edge didn’t feel like a true
+                  AI browser.
+                </p>
+                <p class="project-section__body">
+                  To ask about something specific on a page, users had to open
+                  the side pane and paste the exact text, image, or link they
+                  were looking at in chat. This meant the user did the work of
+                  carrying context to the AI, adding friction to the experience.
+                </p>
+                <p class="project-section__body">
+                  At the same time, we were hearing that users didn’t want AI
+                  everywhere in their browser. So,
+                  <em>
+                    how do we make Copilot feel native to the browser without
+                    taking it over?
+                  </em>
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="project-section reveal">
+            <div class="project-section__head grid">
+              <h2 class="project-section__title t-serif-2xl">Approach</h2>
+              <div class="project-section__text">
+                <p class="project-section__lead">
+                  The context menu is where users already go when they have
+                  something in hand.
+                </p>
+                <p class="project-section__body">
+                  I started here because right-clicking is a familiar behavior
+                  for acting on web content. By the time someone opens the menu,
+                  the context is already there: the text, image, or link they’re
+                  pointing at, and a strong signal of what they want to do with
+                  it. That meant we weren’t asking users to learn a new
+                  behavior, just meeting them where they’re at.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="project-section reveal">
+            <div class="project-section__head grid">
+              <h2 class="project-section__title t-serif-2xl">
+                Initial design
+              </h2>
+              <div class="project-section__text">
+                <p class="project-section__lead">
+                  I stacked Copilot above the menu to protect the flow users
+                  already knew.
+                </p>
+                <p class="project-section__body">
+                  Placing the composer on top meant the traditional menu didn’t
+                  move, so the cursor path to every existing item stayed the
+                  same. Anyone who wanted Copilot could just start typing, and
+                  anyone who didn’t could ignore it. Two separate surfaces also
+                  let Copilot and Edge each keep their own visual language,
+                  which protected Copilot’s brand across Microsoft products and
+                  avoided forcing an awkward blend.
+                </p>
+              </div>
+            </div>
+            <div class="project-images project-images--1">
+              <img
+                class="project-section__img"
+                src="../assets/images/contextual-copilot/cc-initial.png"
+                alt="Initial Contextual Copilot design stacked above the Edge context menu"
+              />
+            </div>
+          </section>
+
+          <section class="project-section reveal">
+            <div class="project-section__head grid">
+              <h2 class="project-section__title t-serif-2xl">Iteration</h2>
+              <div class="project-section__text">
+                <p class="project-section__lead">
+                  Performance regressions ruled out two surfaces, so I
+                  redesigned around one.
+                </p>
+                <p class="project-section__body">
+                  While building, we found that rendering a second surface above
+                  the context menu caused performance regressions that blocked
+                  us from shipping. I worked with engineering partners to
+                  understand the cause and reopened the design question: how do
+                  we keep the composer fast, optional, and out of the way inside
+                  a single menu?
+                </p>
+                <p class="project-section__body">
+                  Removing the second surface also removed what had kept
+                  Copilot’s and Edge’s visual languages apart, so the redesign
+                  had to solve layout and visual language together.
+                </p>
+              </div>
+            </div>
+            <div class="project-images project-images--1">
+              <img
+                class="project-section__img"
+                src="../assets/images/contextual-copilot/cc-iteration.png"
+                alt="Contextual Copilot design iteration within a single Edge context menu"
+              />
+            </div>
+          </section>
+
+          <section class="project-section reveal">
+            <div class="project-section__head grid">
+              <h2 class="project-section__title t-serif-2xl">Solution</h2>
+              <div class="project-section__text">
+                <p class="project-section__lead">
+                  An Edge-native composer that works in any contextual scenario.
+                </p>
+                <p class="project-section__body">
+                  The final design is a custom input field with contextual
+                  actions. The Copilot logo we brought over contributes to a
+                  stronger brand story across Microsoft products. It also
+                  signals that what you type goes to Copilot. The ghost text and
+                  quick actions adapt to the web element a user has selected.
+                </p>
+                <p class="project-section__body">
+                  The visual languages resolved as Edge’s design language moved
+                  closer to Copilot’s, in parallel. The result is quieter and
+                  more adaptable than the first design, and no longer tied to
+                  the context menu, which gave us the chance to redesign the
+                  component and bring it to more surfaces across Edge.
+                </p>
+              </div>
+            </div>
+            <div class="project-images project-images--1">
+              <img
+                class="project-section__img"
+                src="../assets/images/contextual-copilot/cc-solution.png?v=2"
+                alt="Final Contextual Copilot designs adapted for page, image, text, and link contexts"
+              />
+            </div>
+          </section>
+
+          <section class="project-section reveal">
+            <div class="project-section__head grid">
+              <h2 class="project-section__title t-serif-2xl">Impact</h2>
+              <div class="project-section__text">
+                <p class="project-section__lead">
+                  Scaling to multiple use cases across Edge.
+                </p>
+                <p class="project-section__body">
+                  The context menu was just the first use case. This pattern is
+                  now being explored by 3 teams and multiple feature areas in
+                  Edge.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="container">
+      <div class="site-footer t-base">
+        <span>© Kate Zhao 2026</span>
+        <a class="nav-link" href="../index.html">Back to work</a>
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>
