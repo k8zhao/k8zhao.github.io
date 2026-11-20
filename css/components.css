@@ -325,12 +325,15 @@
   border-radius: var(--radius-image);
 }
 
-.project-card__media .placeholder-img {
+.project-card__media .placeholder-img,
+.project-card__visual {
   transition: transform var(--duration-slow) var(--ease-standard);
 }
 
-.project-card:hover .project-card__media .placeholder-img {
-  transform: scale(1.03);
+.project-card__visual {
+  display: block;
+  position: relative;
+  container-type: inline-size;
 }
 
 /* Real cover image inside a project card. */
@@ -341,8 +344,211 @@
   transition: transform var(--duration-slow) var(--ease-standard);
 }
 
-.project-card:hover .project-card__media .project-card__img {
-  transform: scale(1.03);
+@media (prefers-reduced-motion: no-preference) {
+  .project-card:focus-within .project-card__media > .project-card__img,
+  .project-card:focus-within .project-card__media .placeholder-img,
+  .project-card:focus-within .project-card__visual {
+    transform: scale(var(--project-hover-scale));
+  }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .project-card:hover .project-card__media > .project-card__img,
+  .project-card:hover .project-card__media .placeholder-img,
+  .project-card:hover .project-card__visual {
+    transform: scale(var(--project-hover-scale));
+  }
+}
+
+/* Small background crops leave only the original thumbnail if CSS is absent. */
+.contextual-preview__mask {
+  position: absolute;
+  left: var(--copilot-mask-left);
+  top: var(--copilot-mask-top);
+  width: var(--copilot-icon-width);
+  height: var(--copilot-mask-height);
+  background: var(--color-copilot-preview-field);
+}
+
+.contextual-preview__icon {
+  position: absolute;
+  top: var(--copilot-mask-top);
+  height: var(--copilot-mask-height);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.contextual-preview__icon {
+  left: var(--copilot-mask-left);
+  width: var(--copilot-icon-width);
+  background-image: url("../assets/images/home/cc-icon.png");
+  transform: translate3d(0, 0, 0);
+}
+
+.contextual-preview__field {
+  display: none;
+  position: absolute;
+  left: var(--copilot-field-left);
+  top: var(--copilot-mask-top);
+  width: var(--copilot-field-width);
+  height: var(--copilot-mask-height);
+  padding-left: var(--copilot-text-inset);
+  align-items: center;
+  overflow: hidden;
+  background: var(--color-copilot-preview-field);
+  color: var(--color-copilot-preview-caret);
+  font-family: var(--font-copilot-preview);
+  font-size: var(--copilot-text-size);
+  line-height: var(--copilot-text-line);
+}
+
+.contextual-preview__text {
+  white-space: pre;
+}
+
+.contextual-preview__caret {
+  flex-shrink: 0;
+  width: var(--copilot-caret-width);
+  height: var(--copilot-caret-height);
+  background: var(--color-copilot-preview-caret);
+}
+
+@keyframes copilot-icon-bounce {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, var(--copilot-bounce-height), 0);
+  }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .project-card:is(:hover, :focus-within) .contextual-preview__icon {
+    animation: copilot-icon-bounce var(--duration-copilot-bounce)
+      var(--ease-copilot-bounce) both;
+  }
+
+  .project-card:is(:hover, :focus-within) .contextual-preview__field {
+    display: flex;
+  }
+}
+
+/* --- Edge Settings thumbnail --------------------------------------------- */
+.settings-preview__mask {
+  position: absolute;
+  left: var(--settings-switch-mask-left);
+  top: var(--settings-switch-mask-top);
+  width: var(--settings-switch-mask-width);
+  height: var(--settings-switch-mask-height);
+  background: var(--color-settings-preview-row);
+}
+
+/* --- Copilot in Edge carousel -------------------------------------------- */
+.edge-preview__stage {
+  display: none;
+  position: absolute;
+  inset: var(--edge-stage-top) 0 0;
+  overflow: hidden;
+  background: var(--color-surface-alt);
+}
+
+.edge-preview__wheel {
+  position: absolute;
+  left: 50%;
+  top: calc(
+    var(--edge-carousel-front-center) + var(--edge-carousel-radius) - var(--edge-stage-top)
+  );
+  width: 0;
+  height: 0;
+  transform-origin: 0 0;
+}
+
+.edge-preview__orbit {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  transform-origin: 0 0;
+  transform:
+    rotate(calc(var(--i) * var(--edge-carousel-step)))
+    translateY(calc(-1 * var(--edge-carousel-radius)));
+}
+
+.edge-preview__card {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--edge-card-width);
+  aspect-ratio: var(--edge-card-ratio);
+  transform: translate(-50%, -50%);
+}
+
+.edge-preview__artwork {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes edge-carousel-turn {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(var(--edge-carousel-turn));
+  }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .edge-preview[data-carousel-ready] .edge-preview__stage {
+    display: block;
+  }
+
+  .edge-preview[data-carousel-ready] .edge-preview__wheel {
+    animation: edge-carousel-turn var(--duration-edge-carousel) linear infinite paused;
+    will-change: transform;
+  }
+
+  .project-card:is(:hover, :focus-within) .edge-preview[data-carousel-ready] .edge-preview__wheel {
+    animation-play-state: running;
+  }
+}
+
+.settings-preview__switch {
+  position: absolute;
+  left: var(--settings-switch-left);
+  top: var(--settings-switch-top);
+  width: var(--settings-switch-width);
+  height: var(--settings-switch-height);
+  border-radius: var(--radius-pill);
+  background: var(--color-settings-switch-off);
+  transition: background-color var(--duration-base) var(--ease-standard);
+}
+
+.settings-preview__thumb {
+  position: absolute;
+  left: var(--settings-switch-thumb-left);
+  top: var(--settings-switch-thumb-top);
+  width: var(--settings-switch-thumb-width);
+  height: var(--settings-switch-thumb-height);
+  border-radius: var(--radius-pill);
+  background: var(--color-settings-preview-row);
+  box-shadow: var(--shadow-settings-switch-thumb);
+  transition:
+    transform var(--duration-base) var(--ease-standard),
+    background-color var(--duration-base) var(--ease-standard);
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .project-card:is(:hover, :focus-within) .settings-preview__switch {
+    background: var(--color-settings-switch-on);
+  }
+
+  .project-card:is(:hover, :focus-within) .settings-preview__thumb {
+    background: var(--color-settings-switch-thumb-on);
+    transform: translateX(var(--settings-switch-thumb-travel));
+  }
 }
 
 .project-card__meta {
