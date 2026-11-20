@@ -20,9 +20,9 @@
     />
 
     <!-- Token-first cascade: tokens -> global -> components -->
-    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/tokens.css?v=project-previews-7" />
     <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/components.css?v=project-previews-8" />
   </head>
   <body class="home-page">
     <!-- ===================== HERO ===================== -->
@@ -98,12 +98,27 @@
           <!-- Featured project — full 12-column width -->
           <article class="project-card gallery__item--full reveal">
             <a class="project-card__media" href="projects/copilot-in-edge.html">
-              <img
-                class="project-card__img"
-                src="assets/images/home/copilot-thumbnail.png"
-                alt="Copilot in Edge"
-                style="--ratio: 1240 / 608"
-              />
+              <span class="project-card__visual edge-preview">
+                <img
+                  class="project-card__img"
+                  src="assets/images/copilot-in-edge/copilot hero.png"
+                  alt="Copilot in Edge"
+                  style="--ratio: 2880 / 1234"
+                />
+                <span class="edge-preview__stage" aria-hidden="true" hidden>
+                  <span class="edge-preview__wheel">
+                    <span class="edge-preview__card">
+                      <img class="edge-preview__artwork" src="assets/images/copilot-in-edge/carousel-park.png" width="694" height="584" alt="" />
+                    </span>
+                    <span class="edge-preview__card">
+                      <img class="edge-preview__artwork" src="assets/images/copilot-in-edge/carousel-recipe.png" width="694" height="584" alt="" />
+                    </span>
+                    <span class="edge-preview__card">
+                      <img class="edge-preview__artwork" src="assets/images/copilot-in-edge/carousel-beach.png" width="694" height="584" alt="" />
+                    </span>
+                  </span>
+                </span>
+              </span>
             </a>
             <a
               class="project-card__title t-serif-2xl"
@@ -121,12 +136,18 @@
               class="project-card__media"
               href="projects/edge-settings-redesign.html"
             >
-              <img
-                class="project-card__img"
-                src="assets/images/home/settings-thumbnail2.png"
-                alt="Edge settings redesign"
-                style="--ratio: 1 / 1"
-              />
+              <span class="project-card__visual settings-preview">
+                <img
+                  class="project-card__img"
+                  src="assets/images/home/settings-thumbnail2.png"
+                  alt="Edge settings redesign"
+                  style="--ratio: 1 / 1"
+                />
+                <span class="settings-preview__mask" aria-hidden="true"></span>
+                <span class="settings-preview__switch" aria-hidden="true">
+                  <span class="settings-preview__thumb"></span>
+                </span>
+              </span>
             </a>
             <a
               class="project-card__title t-serif-2xl"
@@ -144,12 +165,20 @@
               class="project-card__media"
               href="projects/protected-project.html?project=contextual-copilot"
             >
-              <img
-                class="project-card__img"
-                src="assets/images/home/cc-thumbnail.png"
-                alt="Contextual Copilot"
-                style="--ratio: 1 / 1"
-              />
+              <span class="project-card__visual contextual-preview">
+                <img
+                  class="project-card__img"
+                  src="assets/images/home/cc-thumbnail.png"
+                  alt="Contextual Copilot"
+                  style="--ratio: 1 / 1"
+                />
+                <span class="contextual-preview__mask" aria-hidden="true"></span>
+                <span class="contextual-preview__icon" aria-hidden="true"></span>
+                <span class="contextual-preview__field" aria-hidden="true" hidden>
+                  <span class="contextual-preview__text">i don't get it...</span>
+                  <span class="contextual-preview__caret"></span>
+                </span>
+              </span>
             </a>
             <a
               class="project-card__title t-serif-2xl"
@@ -180,5 +209,6 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/project-previews.js?v=7"></script>
   </body>
 </html>

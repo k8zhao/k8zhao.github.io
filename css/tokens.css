@@ -91,11 +91,69 @@
   --duration-entrance: 950ms;
   --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-elastic-01: cubic-bezier(0.20, 1.50, 0.40, 1.00);
+  /* Cosine lift (first third), then a cosine-timed Elastic_01 return.
+     One continuous envelope avoids the curve's abrupt initial velocity. */
+  --ease-copilot-bounce: linear(
+    0, 0.03806, 0.14645, 0.30866, 0.5, 0.69134, 0.85355, 0.96194,
+    1, 0.92948, 0.73869, 0.48471, 0.2406, 0.06104, -0.03941,
+    -0.0769, -0.07654, -0.0593, -0.03857, -0.0212, -0.00954,
+    -0.00322, -0.00067, -0.00004, 0
+  );
   /* Gentle settle with a touch of overshoot for entrance animations. */
   --ease-settle: cubic-bezier(0.22, 1.12, 0.36, 1);
 
   /* Stagger step applied between sequential entrance animations. */
   --stagger-step: 220ms;
+
+  /* Project thumbnail interactions. Crop coordinates match cc-thumbnail.png. */
+  --project-hover-scale: 1.03;
+  --copilot-bounce-height: -16%;
+  --duration-copilot-bounce: 600ms;
+  --duration-copilot-type: 500ms;
+  --copilot-mask-left: 13.5%;
+  --copilot-mask-top: 18.5%;
+  --copilot-mask-height: 5.5%;
+  --copilot-icon-width: 6%;
+  --copilot-field-left: 20.9%;
+  --copilot-field-width: 66.2%;
+  --copilot-text-inset: 0.55cqw;
+  --font-copilot-preview: "Segoe UI", system-ui, sans-serif;
+  --copilot-text-size: 3.5cqw;
+  --copilot-text-line: 5.5cqw;
+  --copilot-caret-width: 0.25cqw;
+  --copilot-caret-height: 5cqw;
+  --color-copilot-preview-field: #ffffff;
+  --color-copilot-preview-caret: #292622;
+
+  --settings-switch-left: 64.45%;
+  --settings-switch-top: 29.7%;
+  --settings-switch-width: 5.3%;
+  --settings-switch-height: 3%;
+  --settings-switch-mask-left: 64%;
+  --settings-switch-mask-top: 29.45%;
+  --settings-switch-mask-width: 6%;
+  --settings-switch-mask-height: 4.1%;
+  --settings-switch-thumb-width: 45%;
+  --settings-switch-thumb-height: 80%;
+  --settings-switch-thumb-left: 5%;
+  --settings-switch-thumb-top: 10%;
+  --settings-switch-thumb-travel: 100%;
+  --color-settings-preview-row: #fafaf9;
+  --color-settings-switch-off: #c8c8c7;
+  --color-settings-switch-on: #242424;
+  --color-settings-switch-thumb-on: #ffffff;
+  --shadow-settings-switch-thumb: 0 0.1cqw 0.5cqw rgba(0, 0, 0, 0.2);
+
+  --edge-carousel-count: 24;
+  --edge-carousel-step: calc(1turn / var(--edge-carousel-count));
+  --edge-carousel-turn: calc(3 * var(--edge-carousel-step));
+  --duration-edge-carousel: 6s;
+  --edge-carousel-radius: 106.5cqw;
+  --edge-stage-top: 16cqw;
+  --edge-carousel-front-center: 27cqw;
+  --edge-card-width: 24.1cqw;
+  --edge-card-ratio: 694 / 584;
 
   /* ---------------------------------------------------------------------
      Elevation
@@ -110,5 +168,8 @@
     --duration-slow: 0ms;
     --duration-entrance: 0ms;
     --stagger-step: 0ms;
+    --duration-copilot-bounce: 0ms;
+    --duration-copilot-type: 0ms;
+    --duration-edge-carousel: 0ms;
   }
 }
